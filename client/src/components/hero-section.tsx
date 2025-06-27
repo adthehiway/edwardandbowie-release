@@ -125,18 +125,18 @@ export default function HeroSection({ language }: HeroSectionProps) {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full pt-20 sm:pt-16 lg:pt-0">
         {/* Left side - Movie Title and Details */}
-        <div className="flex-1 max-w-2xl text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-cinzel font-bold mb-4 text-white drop-shadow-2xl">
+        <div className="flex-1 max-w-2xl text-center lg:text-left mt-8 sm:mt-4 lg:mt-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-cinzel font-bold mb-3 sm:mb-4 text-white drop-shadow-2xl">
             {t.movieTitle}
           </h1>
 
-          <div className="text-blood-red text-base sm:text-lg md:text-xl font-creepster mb-6 tracking-wider">
+          <div className="text-blood-red text-sm sm:text-base md:text-lg font-creepster mb-4 sm:mb-6 tracking-wider">
             {t.movieDetails}
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
             {t.synopsis}
           </p>
 
@@ -157,7 +157,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
         </div>
 
         {/* Right side - Posters and Actors sections */}
-        <div className="flex flex-col space-y-8 items-center lg:items-end max-w-md w-full lg:w-auto mt-8 lg:mt-0">
+        <div className="flex flex-col space-y-6 items-center lg:items-end max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0">
           {/* Posters section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">{t.posters}</h3>
