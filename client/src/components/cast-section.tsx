@@ -1,4 +1,11 @@
 import { translations, Language } from "@/lib/translations";
+import ameliaImage from "@assets/Amelia Mclain_1751019649583.png";
+import caseyImage from "@assets/Casey Hartnett_1751019649583.png";
+import charlieImage from "@assets/Charlie McElveen_1751019649583.png";
+import davidImage from "@assets/David Howard_1751019649583.png";
+import elliottImage from "@assets/Ellioit Fullam_1751019649583.png";
+import laurenImage from "@assets/Lauren Lavera_1751019649584.png";
+import sarahImage from "@assets/Sarah Voigt_1751019649583.png";
 
 interface CastSectionProps {
   language: Language;
@@ -6,9 +13,21 @@ interface CastSectionProps {
 
 export default function CastSection({ language }: CastSectionProps) {
   const t = translations[language];
-  const castMembers = t.castMembers.map((member, index) => ({
+  
+  // Map of actor names to their actual images
+  const actorImages: { [key: string]: string } = {
+    "Lauren LaVera": laurenImage,
+    "Elliott Fullam": elliottImage,
+    "Sarah Voigt": sarahImage,
+    "Casey Hartnett": caseyImage,
+    "Charlie McElveen": charlieImage,
+    "Amelie McLain": ameliaImage, // Using actual name from translations
+    "David Howard Thornton": davidImage,
+  };
+  
+  const castMembers = t.castMembers.map((member) => ({
     ...member,
-    image: `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`
+    image: actorImages[member.name] || laurenImage, // fallback to Lauren's image if name doesn't match
   }));
   return (
     <section className="py-20 bg-deep-black">
@@ -25,10 +44,6 @@ export default function CastSection({ language }: CastSectionProps) {
                   src={actor.image} 
                   alt={`${actor.name} portrait`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `https://via.placeholder.com/150x150/8B0000/ffffff?text=${actor.name.split(' ').map(n => n[0]).join('')}`;
-                  }}
                 />
               </div>
               <h3 className="font-semibold text-white text-sm sm:text-base truncate">{actor.name}</h3>
