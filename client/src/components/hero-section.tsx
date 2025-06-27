@@ -91,20 +91,22 @@ export default function HeroSection() {
           <h1 className="text-6xl md:text-8xl font-cinzel font-bold mb-4 text-white drop-shadow-2xl">
             Terrifier 2
           </h1>
-          
+
           <div className="text-blood-red text-lg md:text-xl font-creepster mb-6 tracking-wider">
             1h 46m • Horror, Teen Horror • 2022
           </div>
-          
+
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-2xl">
             Resurrected by a sinister entity, Art the Clown returns to Miles County to terrorize a teenage girl and her younger brother on Halloween night.
           </p>
-          
+
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-8">
-            <Button className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg">
-              <Play className="mr-2 h-4 w-4" />
-              TRAILER
+            <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg">
+              <a href="https://hiway-frontend-three.vercel.app/watch/c692d6e9-773a-4d84-a679-3c657b9b5f11" target="_blank" rel="noopener noreferrer">
+                <Play className="mr-2 h-4 w-4" />
+                TRAILER
+              </a>
             </Button>
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg">
               BUY NOW
@@ -146,7 +148,7 @@ export default function HeroSection() {
                   <ChevronLeft className="h-4 w-4 text-white" />
                 </button>
               )}
-              
+
               <div className="flex space-x-3">
                 {visibleActors.map((actor, index) => (
                   <div key={actorStartIndex + index} className="text-center group cursor-pointer">
@@ -166,7 +168,7 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
-              
+
               {actorStartIndex < castMembers.length - 4 && (
                 <button 
                   onClick={nextActors}

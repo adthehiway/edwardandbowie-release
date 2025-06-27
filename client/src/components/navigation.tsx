@@ -11,10 +11,10 @@ export default function Navigation() {
           
           {/* Back to website button */}
           <div>
-            <button className="flex items-center text-white hover:text-blood-red transition-colors duration-300 px-4 py-2 text-sm font-medium">
+            <a href="https://www.superfinefilms.net/" className="flex items-center text-white hover:text-blood-red transition-colors duration-300 px-4 py-2 text-sm font-medium">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to website
-            </button>
+            </a>
           </div>
         </div>
       </div>

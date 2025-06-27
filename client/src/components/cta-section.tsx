@@ -13,15 +13,18 @@ export default function CTASection() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button className="bg-white text-horror-red hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-            <Ticket className="mr-2 h-5 w-5" />
-            Get Tickets
+          <Button asChild className="bg-white text-horror-red hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+            <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
+              <Ticket className="mr-2 h-5 w-5" />
+              Get Tickets
+            </a>
           </Button>
           <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-horror-red px-8 py-4 rounded-lg font-semibold text-lg transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
             <Info className="mr-2 h-5 w-5" />
             Learn More
           </Button>
         </div>
+</old_str>
       </div>
     </section>
   );
