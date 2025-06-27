@@ -24,16 +24,16 @@ const posterImages = [
 ];
 
 const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://m.media-amazon.com/images/M/MV5BYjUwNzc0NzktYWY0Yi00NGFlLWE5NGEtY2NjMzZmMzI3Y2JhXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://m.media-amazon.com/images/M/MV5BNTcyNDQyODAtNGRjMy00YzA5LTliOWUtY2ZjNTVjNDYwZGE1XkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://m.media-amazon.com/images/M/MV5BZTQ0MjUxMzYtN2IxZS00MWZmLWE3MWMtYWMzOGNiNzE2ODg1XkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://m.media-amazon.com/images/M/MV5BMjEyZGE3ZGYtOTk4Mi00NDVjLThmMDctNTg1MDQ2MWZjNGZhXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://m.media-amazon.com/images/M/MV5BMTU1MDk1MDQwNV5BMl5BanBnXkFtZTgwNzQ2MTM3MzE@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Chris Jericho", character: "Burke", image: "https://m.media-amazon.com/images/M/MV5BMjQ5NzU0MTAtZWFhYy00ZjcwLTkyMjMtNDZlYzE1YmJjMWVkXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Kailey Hyman", character: "Brooke", image: "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2NV5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Casey Hartnett", character: "Allie", image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOV5BMl5BanBnXkFtZTgwNjU2OTk5NjE@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlYi00YzBkLWE4ODEtMWQ4ZWYxZjdkYTU1XkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
-  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://m.media-amazon.com/images/M/MV5BMTExMzc0MDEtNWFmOS00ZTc1LWJkOWItMzIwOTBmZDIyMzBlXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://images.unsplash.com/photo-1494790108755-2616b612d7c2?w=150&h=150&fit=crop&crop=face" },
+  { name: "David Howard Thornton", character: "Art the Clown", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" },
+  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" },
+  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" },
+  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face" },
+  { name: "Chris Jericho", character: "Burke", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" },
+  { name: "Kailey Hyman", character: "Brooke", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face" },
+  { name: "Casey Hartnett", character: "Allie", image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face" },
+  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face" },
+  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face" },
 ];
 
 export default function HeroSection() {
