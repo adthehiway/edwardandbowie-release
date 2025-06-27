@@ -30,7 +30,6 @@ export default function CTASection({ language }: CTASectionProps) {
             {t.learnMore}
           </Button>
         </div>
-</old_str>
       </div>
     </section>
   );
