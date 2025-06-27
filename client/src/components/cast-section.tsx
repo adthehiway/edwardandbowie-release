@@ -1,16 +1,14 @@
 const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Elliott Fullam", character: "Jonathan", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Sarah Voigt", character: "Barbara", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Kailey Hyman", character: "Brooke", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Casey Hartnett", character: "Allie", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Charlie McElveen", character: "Jeff", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Johnath Davis", character: "Ricky", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://images.unsplash.com/photo-1541823709867-1b206113eafd?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Leah Voysey", character: "Clown Cafe Host", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Chris Jericho", character: "Burke", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
+  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://m.media-amazon.com/images/M/MV5BYjUwNzc0NzktYWY0Yi00NGFlLWE5NGEtY2NjMzZmMzI3Y2JhXkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "David Howard Thornton", character: "Art the Clown", image: "https://m.media-amazon.com/images/M/MV5BNTcyNDQyODAtNGRjMy00YzA5LTliOWUtY2ZjNTVjNDYwZGE1XkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://m.media-amazon.com/images/M/MV5BZTQ0MjUxMzYtN2IxZS00MWZmLWE3MWMtYWMzOGNiNzE2ODg1XkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://m.media-amazon.com/images/M/MV5BMjEyZGE3ZGYtOTk4Mi00NDVjLThmMDctNTg1MDQ2MWZjNGZhXkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Kailey Hyman", character: "Brooke", image: "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2NV5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Casey Hartnett", character: "Allie", image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOV5BMl5BanBnXkFtZTgwNjU2OTk5NjE@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlYi00YzBkLWE4ODEtMWQ4ZWYxZjdkYTU1XkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://m.media-amazon.com/images/M/MV5BMTU1MDk1MDQwNV5BMl5BanBnXkFtZTgwNzQ2MTM3MzE@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://m.media-amazon.com/images/M/MV5BMTExMzc0MDEtNWFmOS00ZTc1LWJkOWItMzIwOTBmZDIyMzBlXkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
+  { name: "Chris Jericho", character: "Burke", image: "https://m.media-amazon.com/images/M/MV5BMjQ5NzU0MTAtZWFhYy00ZjcwLTkyMjMtNDZlYzE1YmJjMWVkXkEyXkFqcGc@._V1_UX150_CR0,0,150,150_AL_.jpg" },
 ];
 
 export default function CastSection() {
@@ -29,6 +27,10 @@ export default function CastSection() {
                   src={actor.image} 
                   alt={`${actor.name} portrait`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = `https://via.placeholder.com/150x150/666666/ffffff?text=${actor.name.split(' ').map(n => n[0]).join('')}`;
+                  }}
                 />
               </div>
               <h3 className="font-semibold text-white">{actor.name}</h3>

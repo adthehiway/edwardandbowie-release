@@ -24,22 +24,38 @@ const posterImages = [
 ];
 
 const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://m.media-amazon.com/images/M/MV5BYjUwNzc0NzktYWY0Yi00NGFlLWE5NGEtY2NjMzZmMzI3Y2JhXkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://m.media-amazon.com/images/M/MV5BNTcyNDQyODAtNGRjMy00YzA5LTliOWUtY2ZjNTVjNDYwZGE1XkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
-  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://m.media-amazon.com/images/M/MV5BZTQ0MjUxMzYtN2IxZS00MWZmLWE3MWMtYWMzOGNiNzE2ODg1XkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
-  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://m.media-amazon.com/images/M/MV5BMjEyZGE3ZGYtOTk4Mi00NDVjLThmMDctNTg1MDQ2MWZjNGZhXkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
-  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://m.media-amazon.com/images/M/MV5BMTU1MDk1MDQwNV5BMl5BanBnXkFtZTgwNzQ2MTM3MzE@._V1_UX32_CR0,0,32,44_AL_.jpg" },
-  { name: "Chris Jericho", character: "Burke", image: "https://m.media-amazon.com/images/M/MV5BMjQ5NzU0MTAtZWFhYy00ZjcwLTkyMjMtNDZlYzE1YmJjMWVkXkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
+  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://m.media-amazon.com/images/M/MV5BYjUwNzc0NzktYWY0Yi00NGFlLWE5NGEtY2NjMzZmMzI3Y2JhXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "David Howard Thornton", character: "Art the Clown", image: "https://m.media-amazon.com/images/M/MV5BNTcyNDQyODAtNGRjMy00YzA5LTliOWUtY2ZjNTVjNDYwZGE1XkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://m.media-amazon.com/images/M/MV5BZTQ0MjUxMzYtN2IxZS00MWZmLWE3MWMtYWMzOGNiNzE2ODg1XkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://m.media-amazon.com/images/M/MV5BMjEyZGE3ZGYtOTk4Mi00NDVjLThmMDctNTg1MDQ2MWZjNGZhXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://m.media-amazon.com/images/M/MV5BMTU1MDk1MDQwNV5BMl5BanBnXkFtZTgwNzQ2MTM3MzE@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Chris Jericho", character: "Burke", image: "https://m.media-amazon.com/images/M/MV5BMjQ5NzU0MTAtZWFhYy00ZjcwLTkyMjMtNDZlYzE1YmJjMWVkXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Kailey Hyman", character: "Brooke", image: "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2NV5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Casey Hartnett", character: "Allie", image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOV5BMl5BanBnXkFtZTgwNjU2OTk5NjE@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlYi00YzBkLWE4ODEtMWQ4ZWYxZjdkYTU1XkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
+  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://m.media-amazon.com/images/M/MV5BMTExMzc0MDEtNWFmOS00ZTc1LWJkOWItMzIwOTBmZDIyMzBlXkEyXkFqcGc@._V1_UX64_CR0,0,64,89_AL_.jpg" },
 ];
 
 export default function HeroSection() {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryInitialIndex, setGalleryInitialIndex] = useState(0);
+  const [actorStartIndex, setActorStartIndex] = useState(0);
 
   const openGallery = (index: number) => {
     setGalleryInitialIndex(index);
     setGalleryOpen(true);
   };
+
+  const nextActors = () => {
+    const maxIndex = castMembers.length - 4;
+    setActorStartIndex(prev => Math.min(prev + 1, maxIndex));
+  };
+
+  const prevActors = () => {
+    setActorStartIndex(prev => Math.max(prev - 1, 0));
+  };
+
+  const visibleActors = castMembers.slice(actorStartIndex, actorStartIndex + 4);
 
   return (
     <>
@@ -121,23 +137,44 @@ export default function HeroSection() {
           {/* Actors section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4">Actors</h3>
-            <div className="flex space-x-3">
-              {castMembers.slice(0, 4).map((actor, index) => (
-                <div key={index} className="text-center group cursor-pointer">
-                  <img
-                    src={actor.image}
-                    alt={actor.name}
-                    className="w-12 h-12 rounded-full object-cover ring-2 ring-gray-600 group-hover:ring-blood-red transition-all duration-300 mb-2"
-                  />
-                  <div className="text-xs text-white">
-                    <p className="font-medium">{actor.name.split(' ')[0]}</p>
-                    <p className="text-gray-400">{actor.character}</p>
+            <div className="flex items-center space-x-3">
+              {actorStartIndex > 0 && (
+                <button 
+                  onClick={prevActors}
+                  className="flex items-center justify-center p-1 hover:bg-white/10 rounded-full transition-all duration-300"
+                >
+                  <ChevronLeft className="h-4 w-4 text-white" />
+                </button>
+              )}
+              
+              <div className="flex space-x-3">
+                {visibleActors.map((actor, index) => (
+                  <div key={actorStartIndex + index} className="text-center group cursor-pointer">
+                    <img
+                      src={actor.image}
+                      alt={actor.name}
+                      className="w-12 h-12 rounded-full object-cover ring-2 ring-gray-600 group-hover:ring-blood-red transition-all duration-300 mb-2"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `https://via.placeholder.com/64x89/666666/ffffff?text=${actor.name.split(' ').map(n => n[0]).join('')}`;
+                      }}
+                    />
+                    <div className="text-xs text-white">
+                      <p className="font-medium">{actor.name.split(' ')[0]}</p>
+                      <p className="text-gray-400 truncate w-12">{actor.character}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-              <button className="flex items-center justify-center">
-                <ChevronRight className="h-6 w-6 text-white" />
-              </button>
+                ))}
+              </div>
+              
+              {actorStartIndex < castMembers.length - 4 && (
+                <button 
+                  onClick={nextActors}
+                  className="flex items-center justify-center p-1 hover:bg-white/10 rounded-full transition-all duration-300"
+                >
+                  <ChevronRight className="h-4 w-4 text-white" />
+                </button>
+              )}
             </div>
           </div>
         </div>
