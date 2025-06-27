@@ -106,8 +106,10 @@ export default function HeroSection({ language }: HeroSectionProps) {
                 {t.trailer}
               </a>
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
-              {t.buyNow}
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
+              <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
+                {t.buyNow}
+              </a>
             </Button>
           </div>
         </div>
