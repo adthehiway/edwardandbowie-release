@@ -118,8 +118,38 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full pt-20 sm:pt-16 lg:pt-0">
-        {/* Left side - Posters and Actors sections */}
-        <div className="flex flex-col space-y-6 items-center lg:items-center max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0 lg:ml-8 order-2 lg:order-1">
+        {/* Left side - Movie Title and Details */}
+        <div className="flex-1 max-w-2xl text-center lg:text-left mt-8 sm:mt-4 lg:mt-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-cinzel font-bold mb-3 sm:mb-4 text-white drop-shadow-2xl">
+            {t.movieTitle}
+          </h1>
+
+          <div className="text-blood-red text-sm sm:text-base md:text-lg font-creepster mb-4 sm:mb-6 tracking-wider">
+            {t.movieDetails}
+          </div>
+
+          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 leading-relaxed max-w-lg mx-auto lg:mx-0">
+            {t.synopsis}
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
+            <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
+              <a href="https://hiway-frontend-three.vercel.app/watch/c692d6e9-773a-4d84-a679-3c657b9b5f11" target="_blank" rel="noopener noreferrer">
+                <Play className="mr-2 h-4 w-4" />
+                {t.trailer}
+              </a>
+            </Button>
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
+              <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
+                {t.buyNow}
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* Right side - Posters and Actors sections */}
+        <div className="flex flex-col space-y-6 items-center lg:items-center max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0 lg:mr-8">
           {/* Posters section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.posters}</h3>
@@ -182,36 +212,6 @@ export default function HeroSection({ language }: HeroSectionProps) {
                 </button>
               )}
             </div>
-          </div>
-        </div>
-
-        {/* Right side - Movie Title and Details */}
-        <div className="flex-1 max-w-2xl text-center lg:text-right mt-8 sm:mt-4 lg:mt-0 order-1 lg:order-2">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-cinzel font-bold mb-3 sm:mb-4 text-white drop-shadow-2xl">
-            {t.movieTitle}
-          </h1>
-
-          <div className="text-blood-red text-sm sm:text-base md:text-lg font-creepster mb-4 sm:mb-6 tracking-wider">
-            {t.movieDetails}
-          </div>
-
-          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 leading-relaxed max-w-lg mx-auto lg:mx-0 lg:ml-auto">
-            {t.synopsis}
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-end">
-            <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
-              <a href="https://hiway-frontend-three.vercel.app/watch/c692d6e9-773a-4d84-a679-3c657b9b5f11" target="_blank" rel="noopener noreferrer">
-                <Play className="mr-2 h-4 w-4" />
-                {t.trailer}
-              </a>
-            </Button>
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
-              <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
-                {t.buyNow}
-              </a>
-            </Button>
           </div>
         </div>
       </div>
