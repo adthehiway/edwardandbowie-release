@@ -184,7 +184,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
                     <img
                       src={poster.src}
                       alt={poster.alt}
-                      className="w-full h-24 sm:h-30 lg:h-36 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
+                      className="w-full h-16 sm:h-20 lg:h-24 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
                     />
                   </div>
                 ))}
