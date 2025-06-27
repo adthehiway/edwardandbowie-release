@@ -52,34 +52,26 @@ export default function HeroSection({ language }: HeroSectionProps) {
   };
 
   const t = translations[language];
+  
+  // Map of English actor names to their images (same approach as cast-section.tsx)
+  const actorImages: { [key: string]: string } = {
+    "Lauren LaVera": laurenImage,
+    "Elliott Fullam": elliottImage,
+    "Sarah Voigt": sarahImage,
+    "Casey Hartnett": caseyImage,
+    "Charlie McElveen": charlieImage,
+    "Amelie McLain": ameliaImage,
+    "David Howard Thornton": davidImage,
+  };
+  
+  // Get English names to map to images
+  const englishCastMembers = translations.en.castMembers;
+  
   const castMembers = t.castMembers.map((member, index) => {
-    let imageSource;
-    switch (member.name) {
-      case "Lauren Lavera":
-        imageSource = laurenImage;
-        break;
-      case "David Howard Thornton":
-        imageSource = davidImage;
-        break;
-      case "Elliott Fullam":
-        imageSource = elliottImage;
-        break;
-      case "Sarah Voigt":
-        imageSource = sarahImage;
-        break;
-      case "Amelia McLain":
-        imageSource = ameliaImage;
-        break;
-      case "Casey Hartnett":
-        imageSource = caseyImage;
-        break;
-      case "Charlie McElveen":
-        imageSource = charlieImage;
-        break;
-      default:
-        imageSource = `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`;
-        break;
-    }
+    // Find the corresponding English name using the index
+    const englishName = englishCastMembers[index]?.name;
+    const imageSource = actorImages[englishName] || `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`;
+    
     return {
       ...member,
       image: imageSource,
