@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import superfineLogoImage from "@assets/supefine-logo-final_1751015639731.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,9 +11,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-cinzel font-bold text-blood-red">
-              Superfine Films
-            </div>
+            <img 
+              src={superfineLogoImage} 
+              alt="Superfine Films" 
+              className="h-8 w-auto"
+            />
           </div>
           
           {/* Desktop Navigation */}
