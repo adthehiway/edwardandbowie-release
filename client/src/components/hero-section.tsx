@@ -24,16 +24,16 @@ const posterImages = [
 ];
 
 const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://images.unsplash.com/photo-1494790108755-2616b612d7c2?w=150&h=150&fit=crop&crop=face" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" },
-  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" },
-  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" },
-  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face" },
-  { name: "Chris Jericho", character: "Burke", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" },
-  { name: "Kailey Hyman", character: "Brooke", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face" },
-  { name: "Casey Hartnett", character: "Allie", image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face" },
-  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face" },
-  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face" },
+  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Lauren+LaVera" },
+  { name: "David Howard Thornton", character: "Art the Clown", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=David+Thornton" },
+  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Elliott+Fullam" },
+  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Sarah+Voigt" },
+  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Samantha+Scaffidi" },
+  { name: "Chris Jericho", character: "Burke", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Chris+Jericho" },
+  { name: "Kailey Hyman", character: "Brooke", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Kailey+Hyman" },
+  { name: "Casey Hartnett", character: "Allie", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Casey+Hartnett" },
+  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Amelie+McLain" },
+  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Felissa+Rose" },
 ];
 
 export default function HeroSection() {
@@ -85,41 +85,41 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex items-center justify-between h-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full">
         {/* Left side - Movie Title and Details */}
-        <div className="flex-1 max-w-2xl">
-          <h1 className="text-6xl md:text-8xl font-cinzel font-bold mb-4 text-white drop-shadow-2xl">
+        <div className="flex-1 max-w-2xl text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-cinzel font-bold mb-4 text-white drop-shadow-2xl">
             Terrifier 2
           </h1>
 
-          <div className="text-blood-red text-lg md:text-xl font-creepster mb-6 tracking-wider">
+          <div className="text-blood-red text-base sm:text-lg md:text-xl font-creepster mb-6 tracking-wider">
             1h 46m • Horror, Teen Horror • 2022
           </div>
 
-          <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
             Resurrected by a sinister entity, Art the Clown returns to Miles County to terrorize a teenage girl and her younger brother on Halloween night.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 mb-8">
-            <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
+            <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
               <a href="https://hiway-frontend-three.vercel.app/watch/c692d6e9-773a-4d84-a679-3c657b9b5f11" target="_blank" rel="noopener noreferrer">
                 <Play className="mr-2 h-4 w-4" />
                 TRAILER
               </a>
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
               BUY NOW
             </Button>
           </div>
         </div>
 
         {/* Right side - Posters and Actors sections */}
-        <div className="flex flex-col space-y-8 items-end max-w-md">
+        <div className="flex flex-col space-y-8 items-center lg:items-end max-w-md w-full lg:w-auto mt-8 lg:mt-0">
           {/* Posters section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4">Posters</h3>
-            <div className="grid grid-cols-5 gap-2">
+            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">Posters</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
               {posterImages.slice(0, 5).map((poster, index) => (
                 <div 
                   key={index} 
@@ -129,7 +129,7 @@ export default function HeroSection() {
                   <img
                     src={poster.src}
                     alt={poster.alt}
-                    className="w-full h-16 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
+                    className="w-full h-12 sm:h-16 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
                   />
                 </div>
               ))}
@@ -138,8 +138,8 @@ export default function HeroSection() {
 
           {/* Actors section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4">Actors</h3>
-            <div className="flex items-center space-x-3">
+            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">Actors</h3>
+            <div className="flex items-center justify-center lg:justify-start space-x-2">
               {actorStartIndex > 0 && (
                 <button 
                   onClick={prevActors}
@@ -149,21 +149,21 @@ export default function HeroSection() {
                 </button>
               )}
 
-              <div className="flex space-x-3">
+              <div className="flex space-x-2 overflow-x-auto">
                 {visibleActors.map((actor, index) => (
-                  <div key={actorStartIndex + index} className="text-center group cursor-pointer">
+                  <div key={actorStartIndex + index} className="text-center group cursor-pointer flex-shrink-0">
                     <img
                       src={actor.image}
                       alt={actor.name}
-                      className="w-12 h-12 rounded-full object-cover ring-2 ring-gray-600 group-hover:ring-blood-red transition-all duration-300 mb-2"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-gray-600 group-hover:ring-blood-red transition-all duration-300 mb-2"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/64x89/666666/ffffff?text=${actor.name.split(' ').map(n => n[0]).join('')}`;
+                        target.src = `https://via.placeholder.com/64x64/8B0000/ffffff?text=${actor.name.split(' ').map(n => n[0]).join('')}`;
                       }}
                     />
                     <div className="text-xs text-white">
-                      <p className="font-medium">{actor.name.split(' ')[0]}</p>
-                      <p className="text-gray-400 truncate w-12">{actor.character}</p>
+                      <p className="font-medium truncate w-10 sm:w-12">{actor.name.split(' ')[0]}</p>
+                      <p className="text-gray-400 truncate w-10 sm:w-12">{actor.character.split(' ')[0]}</p>
                     </div>
                   </div>
                 ))}
