@@ -124,7 +124,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
             {t.movieTitle}
           </h1>
 
-          <div className="text-blood-red text-sm sm:text-base md:text-lg font-creepster mb-4 sm:mb-6 tracking-wider">
+          <div className="text-blood-red text-base sm:text-lg md:text-xl font-creepster mb-4 sm:mb-6 tracking-wider">
             {t.movieDetails}
           </div>
 
@@ -153,8 +153,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
           {/* Posters section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.posters}</h3>
-            <div className="grid grid-cols-3 gap-3">
-              {posterImages.slice(0, 3).map((poster, index) => (
+            <div className="grid grid-cols-2 gap-4">
+              {posterImages.slice(0, 4).map((poster, index) => (
                 <div 
                   key={index} 
                   className="group cursor-pointer"
