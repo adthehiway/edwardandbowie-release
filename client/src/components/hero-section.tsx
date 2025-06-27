@@ -160,7 +160,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
         </div>
 
         {/* Right side - Posters and Actors sections */}
-        <div className="flex flex-col space-y-6 items-center lg:items-center max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0 lg:mr-8">
+        <div className="flex flex-col space-y-6 items-center lg:items-center max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-16 sm:mb-8 lg:mb-0 lg:mr-8">
           {/* Posters section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.posters}</h3>
