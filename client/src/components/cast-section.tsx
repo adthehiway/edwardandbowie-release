@@ -1,22 +1,20 @@
-const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Lauren+LaVera" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=David+Thornton" },
-  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Elliott+Fullam" },
-  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Sarah+Voigt" },
-  { name: "Kailey Hyman", character: "Brooke", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Kailey+Hyman" },
-  { name: "Casey Hartnett", character: "Allie", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Casey+Hartnett" },
-  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Amelie+McLain" },
-  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Samantha+Scaffidi" },
-  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Felissa+Rose" },
-  { name: "Chris Jericho", character: "Burke", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Chris+Jericho" },
-];
+import { translations, Language } from "@/lib/translations";
 
-export default function CastSection() {
+interface CastSectionProps {
+  language: Language;
+}
+
+export default function CastSection({ language }: CastSectionProps) {
+  const t = translations[language];
+  const castMembers = t.castMembers.map((member, index) => ({
+    ...member,
+    image: `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`
+  }));
   return (
     <section className="py-20 bg-deep-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-12 text-center text-blood-red">
-          Cast
+          {t.cast}
         </h2>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">

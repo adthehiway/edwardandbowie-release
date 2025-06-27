@@ -1,7 +1,13 @@
 import { Ticket, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { translations, Language } from "@/lib/translations";
 
-export default function CTASection() {
+interface CTASectionProps {
+  language: Language;
+}
+
+export default function CTASection({ language }: CTASectionProps) {
+  const t = translations[language];
   return (
     <section className="py-20 bg-gradient-to-r from-horror-red to-blood-red">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -16,12 +22,12 @@ export default function CTASection() {
           <Button asChild className="bg-white text-horror-red hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
             <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
               <Ticket className="mr-2 h-5 w-5" />
-              Get Tickets
+              {t.getTickets}
             </a>
           </Button>
           <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-horror-red px-8 py-4 rounded-lg font-semibold text-lg transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
             <Info className="mr-2 h-5 w-5" />
-            Learn More
+            {t.learnMore}
           </Button>
         </div>
 </old_str>

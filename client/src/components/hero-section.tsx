@@ -3,6 +3,7 @@ import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ImageGallery from "@/components/image-gallery";
 import terrifierMainImage from "@assets/terrifiermain_1751015810320.jpg";
+import { translations, Language } from "@/lib/translations";
 
 // Import all poster images
 import terrifier2Image from "@assets/Terrifier 2_1751015810318.jpg";
@@ -23,20 +24,11 @@ const posterImages = [
   { src: terrifier6Image, alt: "Terrifier 6 scene" },
 ];
 
-const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Lauren+LaVera" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=David+Thornton" },
-  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Elliott+Fullam" },
-  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Sarah+Voigt" },
-  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Samantha+Scaffidi" },
-  { name: "Chris Jericho", character: "Burke", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Chris+Jericho" },
-  { name: "Kailey Hyman", character: "Brooke", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Kailey+Hyman" },
-  { name: "Casey Hartnett", character: "Allie", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Casey+Hartnett" },
-  { name: "Amelie McLain", character: "The Little Pale Girl", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Amelie+McLain" },
-  { name: "Felissa Rose", character: "The Clown Cafe Host", image: "https://via.placeholder.com/150x150/8B0000/ffffff?text=Felissa+Rose" },
-];
+interface HeroSectionProps {
+  language: Language;
+}
 
-export default function HeroSection() {
+export default function HeroSection({ language }: HeroSectionProps) {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryInitialIndex, setGalleryInitialIndex] = useState(0);
   const [actorStartIndex, setActorStartIndex] = useState(0);
@@ -45,6 +37,12 @@ export default function HeroSection() {
     setGalleryInitialIndex(index);
     setGalleryOpen(true);
   };
+
+  const t = translations[language];
+  const castMembers = t.castMembers.map((member, index) => ({
+    ...member,
+    image: `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`
+  }));
 
   const nextActors = () => {
     const maxIndex = castMembers.length - 4;
@@ -89,15 +87,15 @@ export default function HeroSection() {
         {/* Left side - Movie Title and Details */}
         <div className="flex-1 max-w-2xl text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-cinzel font-bold mb-4 text-white drop-shadow-2xl">
-            Terrifier 2
+            {t.movieTitle}
           </h1>
 
           <div className="text-blood-red text-base sm:text-lg md:text-xl font-creepster mb-6 tracking-wider">
-            1h 46m • Horror, Teen Horror • 2022
+            {t.movieDetails}
           </div>
 
           <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Resurrected by a sinister entity, Art the Clown returns to Miles County to terrorize a teenage girl and her younger brother on Halloween night.
+            {t.synopsis}
           </p>
 
           {/* CTA Buttons */}
@@ -105,11 +103,11 @@ export default function HeroSection() {
             <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
               <a href="https://hiway-frontend-three.vercel.app/watch/c692d6e9-773a-4d84-a679-3c657b9b5f11" target="_blank" rel="noopener noreferrer">
                 <Play className="mr-2 h-4 w-4" />
-                TRAILER
+                {t.trailer}
               </a>
             </Button>
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
-              BUY NOW
+              {t.buyNow}
             </Button>
           </div>
         </div>
@@ -118,7 +116,7 @@ export default function HeroSection() {
         <div className="flex flex-col space-y-8 items-center lg:items-end max-w-md w-full lg:w-auto mt-8 lg:mt-0">
           {/* Posters section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">Posters</h3>
+            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">{t.posters}</h3>
             <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
               {posterImages.slice(0, 5).map((poster, index) => (
                 <div 
@@ -138,7 +136,7 @@ export default function HeroSection() {
 
           {/* Actors section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">Actors</h3>
+            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">{t.actors}</h3>
             <div className="flex items-center justify-center lg:justify-start space-x-2">
               {actorStartIndex > 0 && (
                 <button 
