@@ -149,10 +149,10 @@ export default function HeroSection({ language }: HeroSectionProps) {
         </div>
 
         {/* Right side - Posters and Actors sections */}
-        <div className="flex flex-col space-y-6 items-center lg:items-end max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0">
+        <div className="flex flex-col space-y-6 items-center lg:items-center max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0 lg:mr-8">
           {/* Posters section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">{t.posters}</h3>
+            <h3 className="text-white text-lg font-semibold mb-4 text-center">{t.posters}</h3>
             <div className="grid grid-cols-3 gap-3">
               {posterImages.slice(0, 3).map((poster, index) => (
                 <div 
@@ -172,8 +172,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
           {/* Actors section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4 text-center lg:text-left">{t.actors}</h3>
-            <div className="flex items-center justify-center lg:justify-start space-x-2">
+            <h3 className="text-white text-lg font-semibold mb-4 text-center">{t.actors}</h3>
+            <div className="flex items-center justify-center space-x-2">
               {actorStartIndex > 0 && (
                 <button 
                   onClick={prevActors}
@@ -189,15 +189,15 @@ export default function HeroSection({ language }: HeroSectionProps) {
                     <img
                       src={actor.image}
                       alt={actor.name}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-gray-600 group-hover:ring-blood-red transition-all duration-300 mb-2"
+                      className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover ring-2 ring-gray-600 group-hover:ring-blood-red transition-all duration-300 mb-2"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = `https://via.placeholder.com/64x64/8B0000/ffffff?text=${actor.name.split(' ').map(n => n[0]).join('')}`;
                       }}
                     />
                     <div className="text-xs text-white">
-                      <p className="font-medium truncate w-10 sm:w-12">{actor.name.split(' ')[0]}</p>
-                      <p className="text-gray-400 truncate w-10 sm:w-12">{actor.character.split(' ')[0]}</p>
+                      <p className="font-medium truncate w-12 sm:w-14 lg:w-16">{actor.name.split(' ')[0]}</p>
+                      <p className="text-gray-400 truncate w-12 sm:w-14 lg:w-16">{actor.character.split(' ')[0]}</p>
                     </div>
                   </div>
                 ))}
