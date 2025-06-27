@@ -1,27 +1,40 @@
-import React, { useState } from 'react';
-import { Play, ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ImageGallery from "@/components/image-gallery";
-import terrifierMainImage from "@assets/terrifiermain_1751015810320.jpg";
 import { translations, Language } from "@/lib/translations";
+import ImageGallery from "@/components/image-gallery";
 
-// Import all poster images
-import terrifier2Image from "@assets/Terrifier 2_1751015810318.jpg";
-import terrifier3Image from "@assets/Terrifier 3_1751015810318.jpg";
-import terrifier4Image from "@assets/Terrifier 4_1751015810319.jpg";
-import terrifier5Image from "@assets/terrifier 5_1751015810319.jpg";
-import terrifier10Image from "@assets/terrifier 10_1751015810319.jpg";
-import terrifier1Image from "@assets/terrifier1_1751015810320.jpg";
-import terrifier6Image from "@assets/Terrifier6_1751015810320.jpg";
+// Import poster images
+import poster1 from "@assets/Screenshot 2025-06-27 at 10.12.14_1751015542481.png";
+import poster2 from "@assets/Screenshot 2025-06-27 at 10.18.42_1751015925773.png";
+import poster3 from "@assets/Screenshot 2025-06-27 at 10.29.57_1751016600384.png";
+import poster4 from "@assets/Screenshot 2025-06-27 at 12.55.12_1751025313445.png";
+import poster5 from "@assets/Terrifier 2_1751015810318.jpg";
+import poster6 from "@assets/Terrifier 3_1751015810318.jpg";
+import poster7 from "@assets/Terrifier 4_1751015810319.jpg";
+import poster8 from "@assets/Terrifier6_1751015810320.jpg";
+import poster9 from "@assets/terrifier 10_1751015810319.jpg";
+import poster10 from "@assets/terrifier 5_1751015810319.jpg";
+import poster11 from "@assets/terrifier1_1751015810320.jpg";
+import poster12 from "@assets/terrifiermain_1751015810320.jpg";
+
+// Import actor images
+import ameliaImage from "@assets/Amelia Mclain_1751019649583.png";
+import caseyImage from "@assets/Casey Hartnett_1751019649583.png";
+import charlieImage from "@assets/Charlie McElveen_1751019649583.png";
+import davidImage from "@assets/David Howard_1751019649583.png";
+import elliottImage from "@assets/Ellioit Fullam_1751019649583.png";
+import laurenImage from "@assets/Lauren Lavera_1751019649584.png";
+import sarahImage from "@assets/Sarah Voigt_1751019649583.png";
 
 const posterImages = [
-  { src: terrifier2Image, alt: "Terrifier 2 poster" },
-  { src: terrifier3Image, alt: "Terrifier 3 scene" },
-  { src: terrifier4Image, alt: "Terrifier 4 scene" },
-  { src: terrifier5Image, alt: "Terrifier 5 scene" },
-  { src: terrifier10Image, alt: "Terrifier 10 scene" },
-  { src: terrifier1Image, alt: "Terrifier 1 scene" },
-  { src: terrifier6Image, alt: "Terrifier 6 scene" },
+  { src: poster5, alt: "Terrifier 2 poster" },
+  { src: poster6, alt: "Terrifier 3 scene" },
+  { src: poster7, alt: "Terrifier 4 scene" },
+  { src: poster10, alt: "Terrifier 5 scene" },
+  { src: poster9, alt: "Terrifier 10 scene" },
+  { src: poster11, alt: "Terrifier 1 scene" },
+  { src: poster8, alt: "Terrifier 6 scene" },
 ];
 
 interface HeroSectionProps {
@@ -39,10 +52,39 @@ export default function HeroSection({ language }: HeroSectionProps) {
   };
 
   const t = translations[language];
-  const castMembers = t.castMembers.map((member, index) => ({
-    ...member,
-    image: `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`
-  }));
+  const castMembers = t.castMembers.map((member, index) => {
+    let imageSource;
+    switch (member.name) {
+      case "Lauren Lavera":
+        imageSource = laurenImage;
+        break;
+      case "David Howard Thornton":
+        imageSource = davidImage;
+        break;
+      case "Elliott Fullam":
+        imageSource = elliottImage;
+        break;
+      case "Sarah Voigt":
+        imageSource = sarahImage;
+        break;
+      case "Amelia McLain":
+        imageSource = ameliaImage;
+        break;
+      case "Casey Hartnett":
+        imageSource = caseyImage;
+        break;
+      case "Charlie McElveen":
+        imageSource = charlieImage;
+        break;
+      default:
+        imageSource = `https://via.placeholder.com/150x150/8B0000/ffffff?text=${member.name.split(' ').map(n => n[0]).join('')}`;
+        break;
+    }
+    return {
+      ...member,
+      image: imageSource,
+    };
+  });
 
   const nextActors = () => {
     const maxIndex = castMembers.length - 4;
@@ -75,7 +117,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
       {/* Main background image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={terrifierMainImage} 
+          src={poster12}
           alt="Art the Clown terrorizing" 
           className="w-full h-full object-cover object-center"
         />
