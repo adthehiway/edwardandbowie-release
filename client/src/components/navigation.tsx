@@ -1,5 +1,4 @@
 import { ArrowLeft, Globe } from "lucide-react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface NavigationProps {
   language: string;
@@ -23,19 +22,18 @@ export default function Navigation({ language, onLanguageChange, translations }:
             {/* Language Selector */}
             <div className="flex items-center space-x-2">
               <Globe className="h-4 w-4 text-white" />
-              <Select value={language} onValueChange={onLanguageChange}>
-                <SelectTrigger className="w-[100px] bg-transparent border-gray-600 text-white text-sm">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="bg-deep-black border-gray-600">
-                  <SelectItem value="en" className="text-white hover:bg-gray-800">
-                    English
-                  </SelectItem>
-                  <SelectItem value="hi" className="text-white hover:bg-gray-800">
-                    हिंदी
-                  </SelectItem>
-                </SelectContent>
-              </Select>
+              <select 
+                value={language} 
+                onChange={(e) => onLanguageChange(e.target.value)}
+                className="w-[100px] bg-transparent border border-gray-600 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-horror-red"
+              >
+                <option value="en" className="bg-deep-black text-white">
+                  English
+                </option>
+                <option value="hi" className="bg-deep-black text-white">
+                  हिंदी
+                </option>
+              </select>
             </div>
             
             {/* Back to website button */}
