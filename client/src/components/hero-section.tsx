@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageGallery from "@/components/image-gallery";
 import terrifierMainImage from "@assets/terrifiermain_1751015810320.jpg";
-import superfineLogoImage from "@assets/supefine-logo-final_1751015639731.png";
 
 // Import all poster images
 import terrifier2Image from "@assets/Terrifier 2_1751015810318.jpg";
@@ -23,16 +24,31 @@ const posterImages = [
 ];
 
 const castMembers = [
-  { name: "Lauren LaVera", character: "Sienna", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "David Howard Thornton", character: "Art the Clown", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Elliott Fullam", character: "Jonathan", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Sarah Voigt", character: "Barbara", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Kailey Hyman", character: "Brooke", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
-  { name: "Casey Hartnett", character: "Allie", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" },
+  { name: "Lauren LaVera", character: "Sienna Shaw", image: "https://m.media-amazon.com/images/M/MV5BYjUwNzc0NzktYWY0Yi00NGFlLWE5NGEtY2NjMzZmMzI3Y2JhXkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
+  { name: "David Howard Thornton", character: "Art the Clown", image: "https://m.media-amazon.com/images/M/MV5BNTcyNDQyODAtNGRjMy00YzA5LTliOWUtY2ZjNTVjNDYwZGE1XkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
+  { name: "Elliott Fullam", character: "Jonathan Shaw", image: "https://m.media-amazon.com/images/M/MV5BZTQ0MjUxMzYtN2IxZS00MWZmLWE3MWMtYWMzOGNiNzE2ODg1XkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
+  { name: "Sarah Voigt", character: "Barbara Shaw", image: "https://m.media-amazon.com/images/M/MV5BMjEyZGE3ZGYtOTk4Mi00NDVjLThmMDctNTg1MDQ2MWZjNGZhXkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
+  { name: "Samantha Scaffidi", character: "Victoria Heyes", image: "https://m.media-amazon.com/images/M/MV5BMTU1MDk1MDQwNV5BMl5BanBnXkFtZTgwNzQ2MTM3MzE@._V1_UX32_CR0,0,32,44_AL_.jpg" },
+  { name: "Chris Jericho", character: "Burke", image: "https://m.media-amazon.com/images/M/MV5BMjQ5NzU0MTAtZWFhYy00ZjcwLTkyMjMtNDZlYzE1YmJjMWVkXkEyXkFqcGc@._V1_UX32_CR0,0,32,44_AL_.jpg" },
 ];
 
 export default function HeroSection() {
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [galleryInitialIndex, setGalleryInitialIndex] = useState(0);
+
+  const openGallery = (index: number) => {
+    setGalleryInitialIndex(index);
+    setGalleryOpen(true);
+  };
+
   return (
+    <>
+      <ImageGallery
+        images={posterImages}
+        initialIndex={galleryInitialIndex}
+        isOpen={galleryOpen}
+        onClose={() => setGalleryOpen(false)}
+      />
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Navigation arrows */}
       <button className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 rounded-full p-3 text-white transition-all duration-300">
@@ -87,7 +103,11 @@ export default function HeroSection() {
             <h3 className="text-white text-lg font-semibold mb-4">Posters</h3>
             <div className="grid grid-cols-5 gap-2">
               {posterImages.slice(0, 5).map((poster, index) => (
-                <div key={index} className="group cursor-pointer">
+                <div 
+                  key={index} 
+                  className="group cursor-pointer"
+                  onClick={() => openGallery(index)}
+                >
                   <img
                     src={poster.src}
                     alt={poster.alt}
@@ -131,5 +151,6 @@ export default function HeroSection() {
         <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
       </div>
     </section>
+    </>
   );
 }

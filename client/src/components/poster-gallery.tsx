@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import ImageGallery from "@/components/image-gallery";
 import terrifier3Image from "@assets/Terrifier 3_1751015810318.jpg";
 import terrifier4Image from "@assets/Terrifier 4_1751015810319.jpg";
 import terrifier5Image from "@assets/terrifier 5_1751015810319.jpg";
@@ -33,7 +35,22 @@ const galleryImages = [
 ];
 
 export default function PosterGallery() {
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [galleryInitialIndex, setGalleryInitialIndex] = useState(0);
+
+  const openGallery = (index: number) => {
+    setGalleryInitialIndex(index);
+    setGalleryOpen(true);
+  };
+
   return (
+    <>
+      <ImageGallery
+        images={galleryImages}
+        initialIndex={galleryInitialIndex}
+        isOpen={galleryOpen}
+        onClose={() => setGalleryOpen(false)}
+      />
     <section className="py-20 bg-dark-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-12 text-center text-blood-red">
@@ -43,7 +60,11 @@ export default function PosterGallery() {
         {/* Poster Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
+            <div 
+              key={index} 
+              className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
+              onClick={() => openGallery(index)}
+            >
               <img 
                 src={image.src} 
                 alt={image.alt}
@@ -55,5 +76,6 @@ export default function PosterGallery() {
         </div>
       </div>
     </section>
+    </>
   );
 }
