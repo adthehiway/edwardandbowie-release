@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { translations, Language } from "@/lib/translations";
 import ameliaImage from "@assets/Amelia Mclain_1751019649583.png";
 import caseyImage from "@assets/Casey Hartnett_1751019649583.png";
@@ -10,6 +11,40 @@ import sarahImage from "@assets/Sarah Voigt_1751019649583.png";
 interface CastSectionProps {
   language: Language;
 }
+
+interface ActorImageProps {
+  src: string;
+  alt: string;
+  className: string;
+}
+
+const ActorImage: React.FC<ActorImageProps> = ({ src, alt, className }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className="relative w-full h-full">
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-full"></div>
+      )}
+      <img
+        src={src}
+        alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setHasError(true)}
+        style={{ display: hasError ? 'none' : 'block' }}
+      />
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-800 rounded-full flex items-center justify-center">
+          <div className="text-white text-xs font-bold">
+            {alt.split(' ').map(n => n[0]).join('')}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default function CastSection({ language }: CastSectionProps) {
   const t = translations[language];
@@ -27,7 +62,7 @@ export default function CastSection({ language }: CastSectionProps) {
   
   const castMembers = t.castMembers.map((member) => ({
     ...member,
-    image: actorImages[member.name] || laurenImage, // fallback to Lauren's image if name doesn't match
+    image: actorImages[member.name] || laurenImage,
   }));
   return (
     <section className="py-20 bg-deep-black">
@@ -40,8 +75,8 @@ export default function CastSection({ language }: CastSectionProps) {
           {castMembers.map((actor, index) => (
             <div key={index} className="group text-center">
               <div className="relative overflow-hidden rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-3 sm:mb-4 ring-2 sm:ring-4 ring-blood-red/20 group-hover:ring-blood-red transition-all duration-300">
-                <img 
-                  src={actor.image} 
+                <ActorImage
+                  src={actor.image}
                   alt={`${actor.name} portrait`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
