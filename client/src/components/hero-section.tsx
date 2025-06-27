@@ -163,7 +163,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
                   <img
                     src={poster.src}
                     alt={poster.alt}
-                    className="w-full h-16 sm:h-20 lg:h-24 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
+                    className="w-full h-24 sm:h-30 lg:h-36 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
                   />
                 </div>
               ))}
@@ -173,7 +173,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
           {/* Actors section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.actors}</h3>
-            <div className="flex items-center justify-center space-x-2">
+            <div className="flex items-center justify-start space-x-2">
               {actorStartIndex > 0 && (
                 <button 
                   onClick={prevActors}
@@ -185,7 +185,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
               <div className="flex space-x-2 overflow-x-auto">
                 {visibleActors.map((actor, index) => (
-                  <div key={actorStartIndex + index} className="text-center group cursor-pointer flex-shrink-0">
+                  <div key={actorStartIndex + index} className="text-left group cursor-pointer flex-shrink-0">
                     <img
                       src={actor.image}
                       alt={actor.name}
