@@ -45,6 +45,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryInitialIndex, setGalleryInitialIndex] = useState(0);
   const [actorStartIndex, setActorStartIndex] = useState(0);
+  const [posterStartIndex, setPosterStartIndex] = useState(0);
 
   const openGallery = (index: number) => {
     setGalleryInitialIndex(index);
@@ -87,7 +88,17 @@ export default function HeroSection({ language }: HeroSectionProps) {
     setActorStartIndex(prev => Math.max(prev - 1, 0));
   };
 
+  const nextPosters = () => {
+    const maxIndex = posterImages.length - 3;
+    setPosterStartIndex(prev => Math.min(prev + 1, maxIndex));
+  };
+
+  const prevPosters = () => {
+    setPosterStartIndex(prev => Math.max(prev - 1, 0));
+  };
+
   const visibleActors = castMembers.slice(actorStartIndex, actorStartIndex + 4);
+  const visiblePosters = posterImages.slice(posterStartIndex, posterStartIndex + 3);
 
   return (
     <>
@@ -153,20 +164,40 @@ export default function HeroSection({ language }: HeroSectionProps) {
           {/* Posters section */}
           <div className="w-full">
             <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.posters}</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {posterImages.slice(0, 4).map((poster, index) => (
-                <div 
-                  key={index} 
-                  className="group cursor-pointer"
-                  onClick={() => openGallery(index)}
+            <div className="flex items-center space-x-2">
+              {posterStartIndex > 0 && (
+                <button 
+                  onClick={prevPosters}
+                  className="flex items-center justify-center p-1 hover:bg-white/10 rounded-full transition-all duration-300"
                 >
-                  <img
-                    src={poster.src}
-                    alt={poster.alt}
-                    className="w-full h-24 sm:h-30 lg:h-36 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
-                  />
-                </div>
-              ))}
+                  <ChevronLeft className="h-4 w-4 text-white" />
+                </button>
+              )}
+
+              <div className="grid grid-cols-3 gap-3 flex-1">
+                {visiblePosters.map((poster, index) => (
+                  <div 
+                    key={posterStartIndex + index} 
+                    className="group cursor-pointer"
+                    onClick={() => openGallery(posterStartIndex + index)}
+                  >
+                    <img
+                      src={poster.src}
+                      alt={poster.alt}
+                      className="w-full h-24 sm:h-30 lg:h-36 object-cover rounded group-hover:scale-105 transition-transform duration-300 border border-gray-600"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {posterStartIndex < posterImages.length - 3 && (
+                <button 
+                  onClick={nextPosters}
+                  className="flex items-center justify-center p-1 hover:bg-white/10 rounded-full transition-all duration-300"
+                >
+                  <ChevronRight className="h-4 w-4 text-white" />
+                </button>
+              )}
             </div>
           </div>
 
