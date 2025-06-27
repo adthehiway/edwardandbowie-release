@@ -122,7 +122,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
         <div className="flex flex-col space-y-6 items-center lg:items-center max-w-md w-full lg:w-auto mt-4 lg:mt-0 mb-8 lg:mb-0 lg:ml-8 order-2 lg:order-1">
           {/* Posters section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4 text-center">{t.posters}</h3>
+            <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.posters}</h3>
             <div className="grid grid-cols-3 gap-3">
               {posterImages.slice(0, 3).map((poster, index) => (
                 <div 
@@ -142,7 +142,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
           {/* Actors section */}
           <div className="w-full">
-            <h3 className="text-white text-lg font-semibold mb-4 text-center">{t.actors}</h3>
+            <h3 className="text-white text-lg font-semibold mb-4 text-left">{t.actors}</h3>
             <div className="flex items-center justify-center space-x-2">
               {actorStartIndex > 0 && (
                 <button 
