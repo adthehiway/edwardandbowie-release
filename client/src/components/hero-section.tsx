@@ -3,8 +3,9 @@ import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { translations, Language } from "@/lib/translations";
 
-// Import background image
+// Import background image and trailer
 import xfmBackground from "@assets/MV5BOGM4ZDA1MzMtNTFhZS00ZDA1LWFmZWUtYTM3YzliM2RkZDQyXkEyXkFqcGc@._V1__1752652111636.jpg";
+import xfmTrailer from "@assets/XFMTrailer_1752652274957.mp4";
 
 interface HeroSectionProps {
   language: Language;
@@ -61,10 +62,14 @@ export default function HeroSection({ language }: HeroSectionProps) {
         {/* Right side - Trailer Section */}
         <div id="trailer" className="flex-1 max-w-2xl w-full">
           <div className="bg-black/50 backdrop-blur-sm rounded-lg p-6 lg:p-8">
-            <h3 className="text-white text-xl font-semibold mb-4 text-center">Documentary Trailer</h3>
-            <div className="bg-gray-800 rounded-lg p-8 min-h-[300px] lg:min-h-[400px] flex items-center justify-center">
-              <p className="text-gray-400 text-lg text-center">Trailer will be uploaded here</p>
-            </div>
+            <video 
+              controls 
+              className="w-full h-auto rounded-lg shadow-lg"
+              poster={xfmBackground}
+            >
+              <source src={xfmTrailer} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
