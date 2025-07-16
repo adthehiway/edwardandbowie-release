@@ -30,16 +30,16 @@ export default function HeroSection({ language }: HeroSectionProps) {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full pt-20 sm:pt-16 lg:pt-0 gap-8">
         
         {/* Left side - Documentary Information */}
-        <div className="flex-1 text-center lg:text-left max-w-2xl">
+        <div className="flex-1 text-center lg:text-left max-w-2xl bg-black/70 backdrop-blur-sm rounded-lg p-6 lg:p-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-white drop-shadow-2xl">
             {t.movieTitle}
           </h1>
 
-          <div className="text-green-400 text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6 tracking-wide">
+          <div className="text-green-400 text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6 tracking-wide drop-shadow-lg">
             {t.movieDetails}
           </div>
 
-          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 leading-relaxed drop-shadow-lg">
             {t.synopsis}
           </p>
 
