@@ -7,7 +7,7 @@ export const translations = {
     // Hero Section
     movieTitle: "Kick Out the Jams: The Story of XFM",
     movieDetails: "2022 • 15 • 1h 30m",
-    synopsis: "Titled after the first-ever song to play on their airwaves, Kick Out the Jams follows the development of XFM from its rebellious pirate radio roots in the early 90's, through to its official FM radio launch in 1997 as a major platform for launching alternative talent into the mainstream. The doc deep-dives into the struggles and influence of the station which gave rise to the likes of Ricky Gervais & Stephen Merchant, whose global hits The Office and The Ricky Gervais Show were originally developed while working at the radio station. XFM also unlocks its rich musical vault, including rare footage and unseen photos of Oasis and Blur, allowing an intimate look into the station at the centre of the Britpop craze of the 90s. Kick Out the Jams is directed by Ray Burdis (The Wee Man) and produced by Brian Anderson (Britain's Gangland) and Ian Jefferies (Faces of the Underworld).",
+    synopsis: "Titled after the first-ever song to play on their airwaves, Kick Out the Jams follows the development of XFM from its rebellious pirate radio roots in the early 90's, through to its official FM radio launch in 1997 as a major platform for launching alternative talent into the mainstream. The doc deep-dives into the struggles and influence of the station which gave rise to the likes of Ricky Gervais & Stephen Merchant, whose global hits The Office and The Ricky Gervais Show were originally developed while working at the radio station.",
     trailer: "WATCH TRAILER",
     buyNow: "BUY NOW",
     
