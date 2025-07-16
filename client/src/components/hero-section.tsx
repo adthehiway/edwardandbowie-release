@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
-import xfmBackground from "@assets/MV5BOGM4ZDA1MzMtNTFhZS00ZDA1LWFmZWUtYTM3YzliM2RkZDQyXkEyXkFqcGc@._V1__1752652111636.jpg";
+import xfmBackground from "@assets/ph_166090094662ff5652a5f9e_1752652509216.jpg";
 import xfmTrailer from "@assets/XFMTrailer_1752652274957.mp4";
 
 interface HeroSectionProps {
@@ -61,16 +61,14 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
         {/* Right side - Trailer Section */}
         <div id="trailer" className="flex-1 max-w-2xl w-full">
-          <div className="bg-purple-900/50 backdrop-blur-sm rounded-lg p-6 lg:p-8 border border-green-400/20">
-            <video 
-              controls 
-              className="w-full h-auto rounded-lg shadow-lg"
-              poster={xfmBackground}
-            >
-              <source src={xfmTrailer} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <video 
+            controls 
+            className="w-full h-auto rounded-lg shadow-lg"
+            poster={xfmBackground}
+          >
+            <source src={xfmTrailer} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>
