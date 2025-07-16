@@ -30,11 +30,11 @@ export default function HeroSection({ language }: HeroSectionProps) {
         
         {/* Left side - Documentary Information */}
         <div className="flex-1 text-center lg:text-left max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-3 sm:mb-4 text-white drop-shadow-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-white drop-shadow-2xl">
             {t.movieTitle}
           </h1>
 
-          <div className="text-blood-red text-base sm:text-lg md:text-xl font-creepster mb-4 sm:mb-6 tracking-wider">
+          <div className="text-orange-400 text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6 tracking-wide">
             {t.movieDetails}
           </div>
 
@@ -44,13 +44,13 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button asChild className="bg-blood-red hover:bg-horror-red text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
+            <Button asChild className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
               <a href="#trailer" rel="noopener noreferrer">
                 <Play className="mr-2 h-4 w-4" />
                 {t.trailer}
               </a>
             </Button>
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
+            <Button asChild className="bg-slate-700 hover:bg-slate-800 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
               <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
                 {t.buyNow}
               </a>
