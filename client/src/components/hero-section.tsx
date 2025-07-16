@@ -23,7 +23,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
           alt="Ricky Gervais and Stephen Merchant at XFM" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-purple-900/80 to-blue-800/60"></div>
+
       </div>
 
       {/* Main Content - Split Layout */}
