@@ -17,7 +17,7 @@ export default function Navigation({ language, onLanguageChange, translations }:
           <div className="flex items-center">
           </div>
           
-          {/* Right side - Language selector and Back to website button */}
+          {/* Right side - Language selector only */}
           <div className="flex items-center space-x-4">
             {/* Language Selector */}
             <div className="flex items-center space-x-2">
@@ -25,7 +25,7 @@ export default function Navigation({ language, onLanguageChange, translations }:
               <select 
                 value={language} 
                 onChange={(e) => onLanguageChange(e.target.value)}
-                className="w-[100px] bg-transparent border border-gray-600 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-horror-red"
+                className="w-[100px] bg-transparent border border-gray-600 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
               >
                 <option value="en" className="bg-deep-black text-white">
                   English
@@ -34,14 +34,6 @@ export default function Navigation({ language, onLanguageChange, translations }:
                   हिंदी
                 </option>
               </select>
-            </div>
-            
-            {/* Back to website button */}
-            <div>
-              <a href="https://www.superfinefilms.net/" className="flex items-center text-white hover:text-blood-red transition-colors duration-300 px-4 py-2 text-sm font-medium">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                {translations.backToWebsite}
-              </a>
             </div>
           </div>
         </div>
