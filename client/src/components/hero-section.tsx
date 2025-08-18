@@ -62,14 +62,14 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
         {/* Right side - Trailer Section */}
         <div id="trailer" className="flex-1 max-w-2xl w-full">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-            <iframe 
-              src="https://portal.onthehiway.com/watch?s=japt42tbw6"
-              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-              allowFullScreen
-              title="XFM Documentary Trailer"
-            />
-          </div>
+          <iframe 
+            width="420" 
+            height="315" 
+            src="https://portal.onthehiway.com/embed?s=japt42tbw6"
+            className="w-full h-auto rounded-lg shadow-lg"
+            allowFullScreen
+            title="XFM Documentary Trailer"
+          />
         </div>
       </div>
     </section>
