@@ -45,14 +45,15 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button asChild className="bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
-              <a href="#trailer" rel="noopener noreferrer">
-                <Play className="mr-2 h-4 w-4" />
-                {t.trailer}
-              </a>
+            <Button 
+              onClick={() => window.open('https://portal.onthehiway.com/watch?s=japt42tbw6', 'trailer', 'width=800,height=600')}
+              className="bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto"
+            >
+              <Play className="mr-2 h-4 w-4" />
+              {t.trailer}
             </Button>
             <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
-              <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
+              <a href="https://portal.onthehiway.com/watch?s=2jrsxgmiq2" target="_blank" rel="noopener noreferrer">
                 {t.buyNow}
               </a>
             </Button>
