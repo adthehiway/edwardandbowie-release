@@ -30,8 +30,11 @@ export default function Navigation({ language, onLanguageChange, translations }:
                 <option value="en" className="bg-deep-black text-white">
                   English
                 </option>
-                <option value="hi" className="bg-deep-black text-white">
-                  हिंदी
+                <option value="fr" className="bg-deep-black text-white">
+                  French
+                </option>
+                <option value="tl" className="bg-deep-black text-white">
+                  Filipino
                 </option>
               </select>
             </div>

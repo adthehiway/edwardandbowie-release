@@ -18,23 +18,41 @@ export const translations = {
     getTickets: "Get Tickets",
     learnMore: "Learn More"
   },
-  hi: {
+  fr: {
     // Navigation
-    backToWebsite: "वेबसाइट पर वापस जाएं",
+    backToWebsite: "Retour au site web",
     
     // Hero Section
-    movieTitle: "किक आउट द जैम्स: एक्सएफएम की कहानी",
-    movieDetails: "2022 • 15 • 1घ 30मि",
-    synopsis: "अपनी एयरवेव्स पर बजने वाले पहले गाने के नाम पर रखा गया, किक आउट द जैम्स एक्सएफएम के विकास का अनुसरण करता है, जो 90 के दशक की शुरुआत में विद्रोही पायरेट रेडियो जड़ों से लेकर 1997 में वैकल्पिक प्रतिभा को मुख्यधारा में लॉन्च करने के लिए एक प्रमुख मंच के रूप में आधिकारिक एफएम रेडियो लॉन्च तक का सफर है।",
-    trailer: "ट्रेलर देखें",
-    buyNow: "अभी खरीदें",
+    movieTitle: "Kick Out the Jams: L'Histoire de XFM",
+    movieDetails: "2022 • 15 • 1h 30m",
+    synopsis: "Intitulé d'après la toute première chanson diffusée sur leurs ondes, Kick Out the Jams suit le développement de XFM depuis ses racines rebelles de radio pirate au début des années 90, jusqu'à son lancement officiel en FM en 1997 en tant que plateforme majeure pour lancer des talents alternatifs dans le mainstream.",
+    trailer: "VOIR LA BANDE-ANNONCE",
+    buyNow: "ACHETER MAINTENANT",
     
     // Cast Section
-    cast: "कलाकार",
+    cast: "Distribution",
     
     // CTA Section
-    getTickets: "टिकट प्राप्त करें",
-    learnMore: "और जानें"
+    getTickets: "Obtenir des billets",
+    learnMore: "En savoir plus"
+  },
+  tl: {
+    // Navigation
+    backToWebsite: "Bumalik sa website",
+    
+    // Hero Section
+    movieTitle: "Kick Out the Jams: Ang Kuwento ng XFM",
+    movieDetails: "2022 • 15 • 1o 30m",
+    synopsis: "Pinamagatang ayon sa unang kantang tumugtog sa kanilang airwaves, sinusundan ng Kick Out the Jams ang pagbuo ng XFM mula sa mga rebeldeng ugat ng pirate radio noong unang bahagi ng 90's, hanggang sa opisyal na paglunsad ng FM radio noong 1997 bilang pangunahing platform para sa paglulunsad ng alternatibong talento sa mainstream.",
+    trailer: "PANOORIN ANG TRAILER",
+    buyNow: "BILHIN NGAYON",
+    
+    // Cast Section
+    cast: "Cast",
+    
+    // CTA Section
+    getTickets: "Kumuha ng Tickets",
+    learnMore: "Matuto pa"
   }
 };
 
