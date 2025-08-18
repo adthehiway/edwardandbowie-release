@@ -64,7 +64,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
         <div id="trailer" className="flex-1 max-w-2xl w-full">
           <iframe 
             width="420" 
-            height="315" 
+            height="630" 
             src="https://portal.onthehiway.com/embed?s=japt42tbw6"
             className="w-full h-auto rounded-lg shadow-lg"
             allowFullScreen
