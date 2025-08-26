@@ -51,10 +51,11 @@ export default function CastSection({ language }: CastSectionProps) {
     "David Howard Thornton": davidImage,
   };
   
-  const castMembers = t.castMembers.map((member) => ({
-    ...member,
-    image: actorImages[member.name] || laurenImage,
-  }));
+  // Since this is now about Edward Bell and David Bowie documentary, we'll create a simple cast list
+  const castMembers = [
+    { name: "Edward Bell", character: "Featured Artist", image: charlieImage },
+    { name: "Marcus Thompson", character: "Director", image: davidImage },
+  ];
   return (
     <section className="py-20 bg-deep-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
