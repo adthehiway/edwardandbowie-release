@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
-import edwardBackground from "@assets/IMG_0473.jpg_1756196901420.webp";
+import bowieBackground from "@assets/DavidBowieBackground_1756198148691.png";
 import xfmTrailer from "@assets/XFMTrailer_1752652274957.mp4";
 
 interface HeroSectionProps {
@@ -19,8 +19,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
       {/* Main background image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={edwardBackground}
-          alt="Edward Bell art exhibition with David Bowie imagery" 
+          src={bowieBackground}
+          alt="David Bowie Art Decade poster with exhibition imagery" 
           className="w-full h-full object-cover object-center"
         />
 
