@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
-import xfmBackground from "@assets/ph_166090094662ff5652a5f9e_1752652509216.jpg";
+import edwardBackground from "@assets/IMG_0473.jpg_1756196901420.webp";
 import xfmTrailer from "@assets/XFMTrailer_1752652274957.mp4";
 
 interface HeroSectionProps {
@@ -19,8 +19,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
       {/* Main background image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={xfmBackground}
-          alt="Ricky Gervais and Stephen Merchant at XFM" 
+          src={edwardBackground}
+          alt="Edward Bell art exhibition with David Bowie imagery" 
           className="w-full h-full object-cover object-center"
         />
 
