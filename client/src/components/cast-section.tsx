@@ -58,14 +58,14 @@ export default function CastSection({ language }: CastSectionProps) {
   return (
     <section className="py-20 bg-deep-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-12 text-center text-blood-red">
+        <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-12 text-center text-bowie-gold">
           {t.cast}
         </h2>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
           {castMembers.map((actor, index) => (
             <div key={index} className="group text-center">
-              <div className="relative overflow-hidden rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-3 sm:mb-4 ring-2 sm:ring-4 ring-blood-red/20 group-hover:ring-blood-red transition-all duration-300">
+              <div className="relative overflow-hidden rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-3 sm:mb-4 ring-2 sm:ring-4 ring-bowie-red/20 group-hover:ring-bowie-gold transition-all duration-300">
                 <ActorImage
                   src={actor.image}
                   alt={`${actor.name} portrait`}

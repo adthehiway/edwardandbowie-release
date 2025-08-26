@@ -35,7 +35,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
             {t.movieTitle}
           </h1>
 
-          <div className="text-green-400 text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6 tracking-wide drop-shadow-lg">
+          <div className="text-bowie-gold text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6 tracking-wide drop-shadow-lg">
             {t.movieDetails}
           </div>
 
@@ -47,12 +47,12 @@ export default function HeroSection({ language }: HeroSectionProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button 
               onClick={() => window.open('https://portal.onthehiway.com/watch?s=japt42tbw6', 'trailer', 'width=800,height=600')}
-              className="bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto"
+              className="bg-bowie-gold hover:bg-bowie-blue text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto"
             >
               <Play className="mr-2 h-4 w-4" />
               {t.trailer}
             </Button>
-            <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
+            <Button asChild className="bg-bowie-blue hover:bg-bowie-red text-white px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto">
               <a href="https://portal.onthehiway.com/watch?s=2jrsxgmiq2" target="_blank" rel="noopener noreferrer">
                 {t.buyNow}
               </a>

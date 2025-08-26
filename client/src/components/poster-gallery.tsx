@@ -28,7 +28,7 @@ export default function PosterGallery() {
       />
     <section className="py-20 bg-dark-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-12 text-center text-blood-red">
+        <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-12 text-center text-bowie-gold">
           Gallery
         </h2>
         

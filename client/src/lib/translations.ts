@@ -43,6 +43,8 @@ export const translations = {
     movieTitle: "Edward...work in progress",
     movieDetails: "2022 • Dokumentaryo • Pelikulang Sining",
     synopsis: "Isang pelikula ni Marcus Thompson tungkol sa gawa ng artist na si Edward Bell at ang kanyang koneksyon sa 1979-80 New York period ni David Bowie, na nag-premiere sa isang event sa London na kasama sina Bell at Thompson. Kasama rin sa event ang screening ng Saturday Night Live performance ni Bowie.",
+    trailer: "MANOOD NG DOCUMENTARY",
+    buyNow: "MATUTO PA",
     // Cast Section
     cast: "Cast",
 
