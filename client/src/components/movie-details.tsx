@@ -8,31 +8,31 @@ export default function MovieDetails() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-8 text-blood-red">
-              Film Details
+              Edward...work in progress
             </h2>
             
             <div className="space-y-6">
               <div className="border-l-4 border-blood-red pl-6">
                 <h3 className="text-xl font-semibold text-gray-300 mb-2">Director</h3>
-                <p className="text-2xl font-medium">Damien Leone</p>
+                <p className="text-2xl font-medium">Marcus Thompson</p>
               </div>
               
               <div className="border-l-4 border-blood-red pl-6">
-                <h3 className="text-xl font-semibold text-gray-300 mb-2">Writer</h3>
-                <p className="text-2xl font-medium">Damien Leone</p>
+                <h3 className="text-xl font-semibold text-gray-300 mb-2">Description</h3>
+                <p className="text-lg leading-relaxed">A film by Marcus Thompson about the work of artist Edward Bell and his connection to David Bowie's 1979–80 New York period, which premiered at an event in London featuring both Bell and Thompson. The event also included a screening of Bowie's Saturday Night Live performance.</p>
               </div>
               
               <div className="border-l-4 border-blood-red pl-6">
-                <h3 className="text-xl font-semibold text-gray-300 mb-2">Stars</h3>
-                <p className="text-xl">Lauren LaVera, David Howard Thornton, Elliott Fullam</p>
+                <h3 className="text-xl font-semibold text-gray-300 mb-2">Featured Artist</h3>
+                <p className="text-xl">Edward Bell</p>
               </div>
               
               <div className="border-l-4 border-blood-red pl-6">
                 <h3 className="text-xl font-semibold text-gray-300 mb-2">Genre</h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-blood-red hover:bg-horror-red">Horror</Badge>
-                  <Badge className="bg-blood-red hover:bg-horror-red">Teen Horror</Badge>
-                  <Badge className="bg-blood-red hover:bg-horror-red">Body Horror</Badge>
+                  <Badge className="bg-blood-red hover:bg-horror-red">Documentary</Badge>
+                  <Badge className="bg-blood-red hover:bg-horror-red">Art</Badge>
+                  <Badge className="bg-blood-red hover:bg-horror-red">Music</Badge>
                 </div>
               </div>
             </div>
