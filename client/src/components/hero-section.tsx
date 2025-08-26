@@ -5,7 +5,7 @@ import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
 import bowieBackground from "@assets/DavidBowieBackground_1756198148691.png";
-import xfmTrailer from "@assets/XFMTrailer_1752652274957.mp4";
+// Removed old trailer import
 
 interface HeroSectionProps {
   language: Language;
@@ -65,7 +65,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
               className="w-full rounded-lg shadow-lg"
               style={{ height: '360px', aspectRatio: '16/9' }}
               allowFullScreen
-              title="XFM Documentary Trailer"
+              title="Edward Bell Documentary"
             />
           </div>
         </div>
