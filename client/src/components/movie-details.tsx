@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import terrifier2PosterImage from "@assets/Terrifier 2_1751015810318.jpg";
+import edwardPosterImage from "@assets/IMG_0473.jpg_1756196901420.webp";
 
 export default function MovieDetails() {
   return (
@@ -42,8 +42,8 @@ export default function MovieDetails() {
           <div className="relative animate-slide-up">
             <div className="relative group">
               <img 
-                src={terrifier2PosterImage} 
-                alt="Terrifier 2 poster featuring woman and Art the Clown" 
+                src={edwardPosterImage} 
+                alt="Edward Bell art exhibition with David Bowie imagery" 
                 className="w-full rounded-lg shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
