@@ -46,7 +46,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
           {/* CTA Buttons */}
           <div className="flex justify-center lg:justify-start">
             <Button 
-              onClick={() => window.open('https://portal.onthehiway.com/watch?s=japt42tbw6', 'trailer', 'width=800,height=600')}
+              onClick={() => window.open('https://portal.onthehiway.com/watch?s=io59hppx7x', 'trailer', 'width=800,height=600')}
               className="bg-bowie-gold hover:bg-bowie-blue text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto"
             >
               <Play className="mr-2 h-4 w-4" />
