@@ -10,7 +10,7 @@ interface NavigationProps {
 
 export default function Navigation({ language, onLanguageChange, translations }: NavigationProps) {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-nav-gray/95 backdrop-blur-lg border-b border-gray-600">
+    <nav className="fixed top-0 w-full z-50 bg-gray-800/90 backdrop-blur-lg border-b border-gray-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Empty space where logo was */}
