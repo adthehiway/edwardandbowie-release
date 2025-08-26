@@ -109,7 +109,7 @@ Visit www.davidbowienews.com for details about the premiere event.
 
 ```
 Changelog:
-- August 26, 2025: Updated content from Terrifier 2 to Edward & Bowie documentary
+- August 26, 2025: Updated content to Edward & Bowie documentary, cleaned up unused assets
 - June 27, 2025: Initial setup
 ```
 
