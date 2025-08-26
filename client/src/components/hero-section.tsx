@@ -61,7 +61,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
             <iframe 
               width="640" 
               height="360" 
-              src="https://portal.onthehiway.com/embed?s=76so2sl4eq"
+              src="https://portal.onthehiway.com/embed?s=142kkrvt67"
               className="w-full rounded-lg shadow-lg"
               style={{ height: '360px', aspectRatio: '16/9' }}
               allowFullScreen
