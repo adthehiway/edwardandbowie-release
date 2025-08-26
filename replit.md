@@ -1,15 +1,15 @@
-# Terrifier 2 Movie Landing Page
+# Edward & Bowie Documentary Landing Page
 
 ## Overview
 
-This is a full-stack web application showcasing a horror movie landing page for "Terrifier 2" by Superfine Films. The application features a modern React frontend with a horror-themed design and an Express.js backend with PostgreSQL database integration. The project is built with TypeScript and uses modern web development practices.
+This is a full-stack web application showcasing a documentary film landing page for "Edward...work in progress" by Marcus Thompson. The documentary explores the work of artist Edward Bell and his connection to David Bowie's 1979–80 New York period. The application features a modern React frontend with an art-focused design and an Express.js backend with PostgreSQL database integration. The project is built with TypeScript and uses modern web development practices.
 
 ## System Architecture
 
 ### Frontend Architecture
 - **Framework**: React 18 with TypeScript
 - **Routing**: Wouter for client-side routing
-- **Styling**: Tailwind CSS with custom horror theme variables
+- **Styling**: Tailwind CSS with custom theme variables
 - **UI Components**: Shadcn/ui component library with Radix UI primitives
 - **State Management**: TanStack Query for server state management
 - **Build Tool**: Vite for fast development and optimized builds
@@ -31,11 +31,11 @@ This is a full-stack web application showcasing a horror movie landing page for 
 
 ### Frontend Components
 - **Navigation**: Fixed navigation bar with mobile responsive menu
-- **Hero Section**: Full-screen hero with movie poster and CTAs
-- **Movie Details**: Film information with director, cast, and genre details
-- **Poster Gallery**: Image gallery showcasing movie stills
-- **Cast Section**: Grid layout displaying cast members with photos
-- **CTA Section**: Call-to-action buttons for tickets and more info
+- **Hero Section**: Full-screen hero with documentary poster and CTAs
+- **Movie Details**: Film information with director, artist, and genre details
+- **Poster Gallery**: Image gallery showcasing documentary and art stills
+- **Cast Section**: Information about featured artists and participants
+- **CTA Section**: Call-to-action buttons for event information and more details
 - **Footer**: Site footer with social links and company information
 
 ### Backend Infrastructure
@@ -64,7 +64,7 @@ This is a full-stack web application showcasing a horror movie landing page for 
 - **Radix UI**: Accessible component primitives
 - **Tailwind CSS**: Utility-first CSS framework
 - **Lucide React**: Icon library
-- **Google Fonts**: Cinzel, Inter, and Creepster fonts for horror theming
+- **Google Fonts**: Cinzel, Inter, and custom fonts for artistic theming
 
 ### Backend Services
 - **Neon Database**: Serverless PostgreSQL hosting
@@ -93,11 +93,24 @@ This is a full-stack web application showcasing a horror movie landing page for 
 - **Port Configuration**: Server runs on port 5000, exposed on port 80
 - **Workflow**: Automated build and start processes
 
+## Documentary Information
+
+### About the Documentary
+- **Title**: Edward...work in progress
+- **Director**: Marcus Thompson
+- **Subject**: The film explores the work of artist Edward Bell and his relationship with David Bowie during the period of 1979–80 in New York
+- **Premiere**: The documentary had its world premiere at a London event called "Art Decade"
+- **Event Details**: The screening was hosted by Bowie enthusiast Mark Wardel and featured a Q&A with Edward Bell and Marcus Thompson
+
+### Where to Find More Information
+Visit www.davidbowienews.com for details about the premiere event.
+
 ## Changelog
 
 ```
 Changelog:
-- June 27, 2025. Initial setup
+- August 26, 2025: Updated content from Terrifier 2 to Edward & Bowie documentary
+- June 27, 2025: Initial setup
 ```
 
 ## User Preferences

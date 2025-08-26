@@ -4,36 +4,36 @@ export const translations = {
     backToWebsite: "Back to website",
 
     // Hero Section
-    movieTitle: "Kick Out the Jams: The Story of XFM",
-    movieDetails: "2022 • 15 • 1h 30m",
-    synopsis: "Titled after the first-ever song to play on their airwaves, Kick Out the Jams follows the development of XFM from its rebellious pirate radio roots in the early 90's, through to its official FM radio launch in 1997 as a major platform for launching alternative talent into the mainstream.",
-    trailer: "WATCH TRAILER",
-    buyNow: "BUY NOW",
+    movieTitle: "Edward...work in progress",
+    movieDetails: "2022 • Documentary • Art Film",
+    synopsis: "A film by Marcus Thompson about the work of artist Edward Bell and his connection to David Bowie's 1979–80 New York period, which premiered at an event in London featuring both Bell and Thompson. The event also included a screening of Bowie's Saturday Night Live performance.",
+    trailer: "WATCH DOCUMENTARY",
+    buyNow: "LEARN MORE",
 
     // Cast Section
     cast: "Cast",
 
     // CTA Section
-    getTickets: "Get Tickets",
-    learnMore: "Learn More"
+    getTickets: "Visit Event Info",
+    learnMore: "About Art Decade"
   },
   fr: {
     // Navigation
     backToWebsite: "Retour au site web",
 
     // Hero Section
-    movieTitle: "Kick Out the Jams: L'Histoire de XFM",
-    movieDetails: "2022 • 15 • 1h 30m",
-    synopsis: "Intitulé d'après la toute première chanson diffusée sur leurs ondes, Kick Out the Jams suit le développement de XFM depuis ses racines rebelles de radio pirate au début des années 90, jusqu'à son lancement officiel en FM en 1997 en tant que plateforme majeure pour lancer des talents alternatifs dans le mainstream.",
-    trailer: "VOIR LA BANDE-ANNONCE",
-    buyNow: "ACHETER MAINTENANT",
+    movieTitle: "Edward...work in progress",
+    movieDetails: "2022 • Documentaire • Film d'Art",
+    synopsis: "Un film de Marcus Thompson sur le travail de l'artiste Edward Bell et sa connexion avec la période new-yorkaise de David Bowie de 1979-80, qui a été présenté en première lors d'un événement à Londres avec Bell et Thompson. L'événement comprenait également une projection de la performance de Bowie dans Saturday Night Live.",
+    trailer: "VOIR LE DOCUMENTAIRE",
+    buyNow: "EN SAVOIR PLUS",
 
     // Cast Section
     cast: "Distribution",
 
     // CTA Section
-    getTickets: "Obtenir des billets",
-    learnMore: "En savoir plus"
+    getTickets: "Info Événement",
+    learnMore: "À propos d'Art Decade"
   },
   tl: {
     // Navigation

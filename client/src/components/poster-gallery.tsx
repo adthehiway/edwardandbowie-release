@@ -1,36 +1,11 @@
 import React, { useState } from 'react';
 import ImageGallery from "@/components/image-gallery";
-import terrifier3Image from "@assets/Terrifier 3_1751015810318.jpg";
-import terrifier4Image from "@assets/Terrifier 4_1751015810319.jpg";
-import terrifier5Image from "@assets/terrifier 5_1751015810319.jpg";
-import terrifier10Image from "@assets/terrifier 10_1751015810319.jpg";
-import terrifier1Image from "@assets/terrifier1_1751015810320.jpg";
-import terrifier6Image from "@assets/Terrifier6_1751015810320.jpg";
+import edwardPosterImage from "@assets/IMG_0473.jpg_1756196901420.webp";
 
 const galleryImages = [
   {
-    src: terrifier3Image,
-    alt: "Terrifier 3 scene with character wearing angel wings",
-  },
-  {
-    src: terrifier4Image,
-    alt: "Terrifier 4 scene with bloodied male character",
-  },
-  {
-    src: terrifier5Image,
-    alt: "Terrifier 5 featuring menacing clown character with rotting teeth",
-  },
-  {
-    src: terrifier10Image,
-    alt: "Terrifier 10 showing clown figure in red atmospheric lighting",
-  },
-  {
-    src: terrifier1Image,
-    alt: "Terrifier 1 scene with Art the Clown near vintage television",
-  },
-  {
-    src: terrifier6Image,
-    alt: "Terrifier 6 featuring disturbing doll character in dark setting",
+    src: edwardPosterImage,
+    alt: "Edward Bell art exhibition featuring David Bowie imagery and creative work",
   },
 ];
 
@@ -58,11 +33,11 @@ export default function PosterGallery() {
         </h2>
         
         {/* Poster Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
+              className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer max-w-md"
               onClick={() => openGallery(index)}
             >
               <img 

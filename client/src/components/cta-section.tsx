@@ -12,15 +12,15 @@ export default function CTASection({ language }: CTASectionProps) {
     <section className="py-20 bg-gradient-to-r from-horror-red to-blood-red">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-cinzel font-bold mb-6">
-          Experience the Terror
+          Discover the Art
         </h2>
         <p className="text-xl mb-8 text-gray-100">
-          Don't miss the most terrifying sequel of the year
+          Explore the connection between Edward Bell and David Bowie's creative period
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button asChild className="bg-white text-horror-red hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-            <a href="https://hiway-frontend-three.vercel.app/watch/e2e87e0f-9ff5-4acb-8ae4-bee681bf63b2" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.davidbowienews.com" target="_blank" rel="noopener noreferrer">
               <Ticket className="mr-2 h-5 w-5" />
               {t.getTickets}
             </a>
