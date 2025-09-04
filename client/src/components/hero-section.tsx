@@ -6,6 +6,7 @@ import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
 import bowieBackground from "@assets/Edward & Bowie 3_1756976822253.png";
+import directorImage from "@assets/Screenshot 2025-09-04 at 10.12.23_1756977206692.png";
 // Removed old trailer import
 
 interface HeroSectionProps {
@@ -130,14 +131,24 @@ export default function HeroSection({ language }: HeroSectionProps) {
               {/* Page 2: Marcus Thompson */}
               <div className="w-full flex-shrink-0 px-6 py-4 overflow-y-auto">
                 <h3 className="text-xl font-bold text-bowie-accent mb-4">Marcus Thompson - Director</h3>
-                <div className="text-gray-200 leading-relaxed space-y-4">
-                  <p>Marcus Thompson's film career is built on a solid foundation of drawing, painting and experimenting with magnetic tape, collage and any other medium he could find to express himself. Having made several experimental films during his time at art college in Bristol, he joined Granada Television as an assistant film editor in order to learn the craft of professional film post-production.</p>
-                  
-                  <p>After years as a picture and sound editor, Marcus has become a highly accomplished screenwriter, director and producer. His years of experience as a film editor proved to be an invaluable foundation on which to base his directorial career. He made a name for himself editing award winning SOUTH BANK SHOWS and several BBC classic documentaries including Michael Wood's IN SEARCH OF series.</p>
-                  
-                  <p>He began directing corporate films for French fashion house Marie Claire, Harrods and Honda, before a short period making music videos for bands such as Ocean Colour Scene, Jesus Jones, Runrig etc. He has produced and directed four feature films, MALEVOLENCE, MIDDLETON'S CHANGELING, the musical film noire THE BIGGEST THING THAT EVER HIT BROADWAY (In Competition Sitges 2018), and award winning, A PLACE TO STAY (GAIA Award at California's WCFF).</p>
-                  
-                  <p>Thompson's psychological thriller TOWNSVILLE is slated for 2026 in Queensland, Australia and SHOOTING BERNARDA, an adaptation of Lorca's masterpiece, is scheduled for 2027 in Andalucia, Spain.</p>
+                <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="lg:w-1/3 flex-shrink-0">
+                    <img 
+                      src={directorImage}
+                      alt="Marcus Thompson directing on set with film equipment"
+                      className="w-full rounded-lg shadow-lg"
+                    />
+                    <p className="text-sm text-gray-400 mt-2 text-center">Marcus Thompson on set</p>
+                  </div>
+                  <div className="lg:w-2/3 text-gray-200 leading-relaxed space-y-4">
+                    <p>Marcus Thompson's film career is built on a solid foundation of drawing, painting and experimenting with magnetic tape, collage and any other medium he could find to express himself. Having made several experimental films during his time at art college in Bristol, he joined Granada Television as an assistant film editor in order to learn the craft of professional film post-production.</p>
+                    
+                    <p>After years as a picture and sound editor, Marcus has become a highly accomplished screenwriter, director and producer. His years of experience as a film editor proved to be an invaluable foundation on which to base his directorial career. He made a name for himself editing award winning SOUTH BANK SHOWS and several BBC classic documentaries including Michael Wood's IN SEARCH OF series.</p>
+                    
+                    <p>He began directing corporate films for French fashion house Marie Claire, Harrods and Honda, before a short period making music videos for bands such as Ocean Colour Scene, Jesus Jones, Runrig etc. He has produced and directed four feature films, MALEVOLENCE, MIDDLETON'S CHANGELING, the musical film noire THE BIGGEST THING THAT EVER HIT BROADWAY (In Competition Sitges 2018), and award winning, A PLACE TO STAY (GAIA Award at California's WCFF).</p>
+                    
+                    <p>Thompson's psychological thriller TOWNSVILLE is slated for 2026 in Queensland, Australia and SHOOTING BERNARDA, an adaptation of Lorca's masterpiece, is scheduled for 2027 in Andalucia, Spain.</p>
+                  </div>
                 </div>
               </div>
 
