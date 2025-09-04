@@ -63,7 +63,13 @@ export default function HeroSection({ language }: HeroSectionProps) {
             {t.movieDetails}
           </div>
 
-          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-gray-200 leading-relaxed drop-shadow-lg">
+          {/* Mobile Synopsis - Short version */}
+          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-gray-200 leading-relaxed drop-shadow-lg block md:hidden">
+            {t.mobileSynopsis}
+          </p>
+          
+          {/* Desktop Synopsis - Full version */}
+          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-gray-200 leading-relaxed drop-shadow-lg hidden md:block">
             {t.synopsis}
           </p>
           
