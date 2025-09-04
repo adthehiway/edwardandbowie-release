@@ -4,11 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { translations, Language } from "@/lib/translations";
 
-// Import background images and trailer
-import bowieBackground1 from "@assets/Edward & Bowie_1756977321207.png";
-import bowieBackground2 from "@assets/Edward & Bowie 2_1756977323784.png";
-import bowieBackground3 from "@assets/Edward & Bowie 3_1756977326050.png";
-import bowieBackground4 from "@assets/Edward & Bowie 4_1756977328193.png";
+// Import background image and trailer
+import bowieBackground from "@assets/Edward & Bowie 4_1756998772435.png";
 import directorImage from "@assets/Screenshot 2025-09-04 at 10.12.23_1756977206692.png";
 // Removed old trailer import
 
@@ -21,33 +18,16 @@ export default function HeroSection({ language }: HeroSectionProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentBackground, setCurrentBackground] = useState(0);
-  
-  const backgroundImages = [
-    { src: bowieBackground1, alt: "Edward & Bowie with full credits" },
-    { src: bowieBackground2, alt: "Edward & Bowie clean version" },
-    { src: bowieBackground3, alt: "Edward & Bowie simple version" },
-    { src: bowieBackground4, alt: "Edward & Bowie minimal version" }
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center">
-      {/* Background Carousel */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        {backgroundImages.map((bg, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              index === currentBackground ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img 
-              src={bg.src}
-              alt={bg.alt} 
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        ))}
+        <img 
+          src={bowieBackground}
+          alt="Edward & Bowie documentary poster" 
+          className="w-full h-full object-cover object-center"
+        />
       </div>
 
       {/* Main Content - Split Layout */}
@@ -264,27 +244,6 @@ export default function HeroSection({ language }: HeroSectionProps) {
           </div>
         </DialogContent>
       </Dialog>
-      
-      {/* Background Navigation Dots */}
-      <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="flex items-center space-x-3 bg-black/50 backdrop-blur-sm rounded-full px-4 py-2">
-          {backgroundImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentBackground(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentBackground === index 
-                  ? 'bg-bowie-accent scale-125' 
-                  : 'bg-white/50 hover:bg-white/70'
-              }`}
-              aria-label={`Switch to background ${index + 1}`}
-            />
-          ))}
-          <div className="ml-3 text-xs text-white/70">
-            {currentBackground + 1}/4
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
