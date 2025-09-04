@@ -25,7 +25,7 @@
   --radius: 0.5rem;
   
   /* David Bowie theme colors */
-  --bowie-gold: hsl(45, 100%, 51%);
+  --bowie-accent: #98e5fd;
   --bowie-blue: hsl(200, 100%, 50%);
   --bowie-red: hsl(0, 85%, 45%);
   --bowie-silver: hsl(0, 0%, 75%);
@@ -64,7 +64,7 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    background-image: url('@assets/Edward & Bowie 2_1756976357248.png');
+    background-image: url('@assets/Edward & Bowie 3_1756976822253.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -83,8 +83,12 @@
     font-family: 'Creepster', cursive;
   }
   
+  .bg-bowie-accent {
+    background-color: var(--bowie-accent);
+  }
+  
   .bg-bowie-gold {
-    background-color: var(--bowie-gold);
+    background-color: var(--bowie-accent);
   }
   
   .bg-bowie-blue {
@@ -111,8 +115,12 @@
     background-color: var(--nav-gray);
   }
   
+  .text-bowie-accent {
+    color: var(--bowie-accent);
+  }
+  
   .text-bowie-gold {
-    color: var(--bowie-gold);
+    color: var(--bowie-accent);
   }
   
   .text-bowie-blue {
@@ -127,16 +135,24 @@
     color: var(--bowie-silver);
   }
   
+  .border-bowie-accent {
+    border-color: var(--bowie-accent);
+  }
+  
   .border-bowie-gold {
-    border-color: var(--bowie-gold);
+    border-color: var(--bowie-accent);
   }
   
   .border-bowie-red {
     border-color: var(--bowie-red);
   }
   
+  .ring-bowie-accent {
+    --tw-ring-color: var(--bowie-accent);
+  }
+  
   .ring-bowie-gold {
-    --tw-ring-color: var(--bowie-gold);
+    --tw-ring-color: var(--bowie-accent);
   }
   
   .animate-fade-in {

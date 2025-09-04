@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
-import bowieBackground from "@assets/Edward & Bowie 2_1756976357248.png";
+import bowieBackground from "@assets/Edward & Bowie 3_1756976822253.png";
 // Removed old trailer import
 
 interface HeroSectionProps {

@@ -25,7 +25,7 @@ export default function Navigation({ language, onLanguageChange, translations }:
               <select 
                 value={language} 
                 onChange={(e) => onLanguageChange(e.target.value)}
-                className="w-[100px] bg-transparent border border-gray-600 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-bowie-gold"
+                className="w-[100px] bg-transparent border border-gray-600 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-bowie-accent"
               >
                 <option value="en" className="bg-deep-black text-white">
                   English
