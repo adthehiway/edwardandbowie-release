@@ -51,7 +51,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
       </div>
 
       {/* Main Content - Split Layout */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full pt-20 sm:pt-16 lg:pt-0 gap-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between h-full pt-20 sm:pt-16 lg:pt-0 pb-20 sm:pb-16 lg:pb-8 gap-8">
         
         {/* Left side - Documentary Information */}
         <div className="flex-1 text-center lg:text-left max-w-2xl bg-black/70 backdrop-blur-sm rounded-lg p-6 lg:p-8">
