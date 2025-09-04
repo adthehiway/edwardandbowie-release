@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
-import bowieBackground from "@assets/DavidBowieBackground_1756198148691.png";
+import bowieBackground from "@assets/Edward & Bowie 2_1756976357248.png";
 // Removed old trailer import
 
 interface HeroSectionProps {
