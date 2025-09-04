@@ -1,6 +1,7 @@
-import React from "react";
-import { Play } from "lucide-react";
+import React, { useState } from "react";
+import { Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { translations, Language } from "@/lib/translations";
 
 // Import background image and trailer
@@ -13,6 +14,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ language }: HeroSectionProps) {
   const t = translations[language];
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -39,9 +41,16 @@ export default function HeroSection({ language }: HeroSectionProps) {
             {t.movieDetails}
           </div>
 
-          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 leading-relaxed drop-shadow-lg">
+          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-gray-200 leading-relaxed drop-shadow-lg">
             {t.synopsis}
           </p>
+          
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="text-bowie-gold hover:text-bowie-blue underline text-sm mb-6 sm:mb-8 cursor-pointer transition-colors duration-200"
+          >
+            {t.readMore}
+          </button>
 
           {/* CTA Buttons */}
           <div className="flex justify-center lg:justify-start">
@@ -70,6 +79,20 @@ export default function HeroSection({ language }: HeroSectionProps) {
           </div>
         </div>
       </div>
+      
+      {/* Read More Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-black/95 border-bowie-gold">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-bowie-gold mb-4">
+              {t.movieTitle}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="text-gray-200 leading-relaxed whitespace-pre-line">
+            {t.fullSynopsis}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
