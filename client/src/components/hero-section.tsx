@@ -31,7 +31,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
   ];
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         {backgroundImages.map((bg, index) => (

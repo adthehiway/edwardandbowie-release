@@ -14,7 +14,7 @@ export default function Home() {
   const t = translations[language];
 
   return (
-    <div className="h-screen overflow-hidden bg-deep-black text-white">
+    <div className="min-h-screen bg-deep-black text-white">
       <Navigation 
         language={language} 
         onLanguageChange={handleLanguageChange}
