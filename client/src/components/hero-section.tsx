@@ -53,13 +53,19 @@ export default function HeroSection({ language }: HeroSectionProps) {
           </button>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button 
               onClick={() => window.open('https://portal.onthehiway.com/watch?s=io59hppx7x', 'trailer', 'width=800,height=600')}
               className="bg-bowie-gold hover:bg-bowie-blue text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto"
             >
               <Play className="mr-2 h-4 w-4" />
               {t.trailer}
+            </Button>
+            <Button 
+              onClick={() => window.open('https://www.davidbowienews.com', '_blank')}
+              className="bg-transparent border-2 border-bowie-accent text-bowie-accent hover:bg-bowie-accent hover:text-black px-6 py-3 rounded font-semibold shadow-lg w-full sm:w-auto transition-all duration-300"
+            >
+              {t.buyNow}
             </Button>
           </div>
         </div>
