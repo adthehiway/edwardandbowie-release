@@ -1,2 +1,2 @@
 Edward & Bowie Documentary Landing Page
-Latest Update: update v2
+Latest Update: update v3
