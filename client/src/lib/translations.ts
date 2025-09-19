@@ -35,6 +35,23 @@ export const translations = {
     getTickets: "Info Événement",
     learnMore: "À propos d'Art Decade"
   },
+  de: {
+    // Navigation
+    backToWebsite: "Zurück zur Website",
+
+    // Hero Section
+    movieTitle: "Edward & Bowie",
+    movieDetails: "2022 • Dokumentarfilm • Kunstfilm",
+    synopsis: "Prominente, Models und Popstars bildeten den Strom der Menschheit, der 1981 durch Edward Bells Kellerraum-Studio in Earl's Court floss, dem Jahr, in dem Marcus Thompson den ursprünglichen Kurzfilm mit dem Titel 'Edward' drehte. Teils Fantasie, teils Realität untersuchte der dreißigminütige Film Bells Methoden, Einflüsse, Lebensstil und Werk und wurde auf 35mm in London und Südfrankreich gedreht. Jetzt wurde ein neuer Film fertiggestellt.",
+    mobileSynopsis: "Prominente, Models und Popstars bildeten den Strom der Menschheit, der 1981 durch Edward Bells Kellerraum-Studio in Earl's Court floss, dem Jahr, in dem Marcus Thompson den ursprünglichen Kurzfilm mit dem Titel 'Edward' drehte.",
+    readMore: "Mehr lesen",
+    fullSynopsis: "Prominente, Models und Popstars bildeten den Strom der Menschheit, der 1981 durch Edward Bells Kellerraum-Studio in Earl's Court floss, dem Jahr, in dem Marcus Thompson den ursprünglichen Kurzfilm mit dem Titel 'Edward' drehte. Teils Fantasie, teils Realität untersuchte der dreißigminütige Film Bells Methoden, Einflüsse, Lebensstil und Werk und wurde auf 35mm in London und Südfrankreich gedreht. Jetzt wurde ein neuer Film fertiggestellt.\n\nThompson fand das 35mm-Negativ des ursprünglichen Films in den BFI-Archiven. Die Idee war, die Welt des Künstlers über vier Jahrzehnte später erneut zu besuchen, während er auf das Chronische, das Kreative, das Statische und Chaotische zurückblickt – seine Heroinsucht, seine enge Freundschaft mit David Bowie und eine anhaltende Liebe. Spielt dieser Film in den frühen 1980ern, aber wird von der Zukunft verfolgt? Oder spielt er in der Gegenwart und wird von der Vergangenheit verfolgt? In Edwards eigenen Worten: 'In den frühen Achtzigern war ich ein vollwertiger Junkie und trug nichts Kreatives zu deinen Aufnahmen bei; ich möchte dieses Unrecht korrigieren. Lass es uns auf eine andere Ebene bringen, mit mehr Tiefe und die Zeitspanne ausdehnen, damals und heute.'",
+    trailer: "DOKUMENTARFILM ANSEHEN",
+    buyNow: "MEHR ERFAHREN",
+    // CTA Section
+    getTickets: "Event-Info besuchen",
+    learnMore: "Über Art Decade"
+  },
   es: {
     // Navigation
     backToWebsite: "Volver al sitio web",

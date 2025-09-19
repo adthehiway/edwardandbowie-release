@@ -33,6 +33,9 @@ export default function Navigation({ language, onLanguageChange, translations }:
                 <option value="fr" className="bg-deep-black text-white">
                   French
                 </option>
+                <option value="de" className="bg-deep-black text-white">
+                  German
+                </option>
                 <option value="es" className="bg-deep-black text-white">
                   Spanish
                 </option>
