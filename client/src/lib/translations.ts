@@ -5,7 +5,7 @@ export const translations = {
 
     // Hero Section
     movieTitle: "Edward & Bowie",
-    movieDetails: "2022 • Documentary • Art Film",
+    movieDetails: "2025 • Documentary • Art Film",
     synopsis: "Socialites, models and pop stars made up the stream of humanity that flowed through Edward Bell's Earl's Court basement studio in 1981, the year Marcus Thompson shot the original cinema short entitled 'Edward'. Part fantasy and part reality, the thirty-minute film examined Bell's methods, influences, lifestyle and work and was shot on 35mm in London and the South of France. Now a new film has just been completed.",
     mobileSynopsis: "Socialites, models and pop stars made up the stream of humanity that flowed through Edward Bell's Earl's Court basement studio in 1981, the year Marcus Thompson shot the original cinema short entitled 'Edward'.",
     readMore: "Read More",
@@ -23,7 +23,7 @@ export const translations = {
 
     // Hero Section
     movieTitle: "Edward & Bowie",
-    movieDetails: "2022 • Documentaire • Film d'Art",
+    movieDetails: "2025 • Documentaire • Film d'Art",
     synopsis: "Socialites, models and pop stars made up the stream of humanity that flowed through Edward Bell's Earl's Court basement studio in 1981, the year Marcus Thompson shot the original cinema short entitled 'Edward'. Part fantasy and part reality, the thirty-minute film examined Bell's methods, influences, lifestyle and work and was shot on 35mm in London and the South of France. Now a new film has just been completed.",
     mobileSynopsis: "Socialites, models and pop stars made up the stream of humanity that flowed through Edward Bell's Earl's Court basement studio in 1981, the year Marcus Thompson shot the original cinema short entitled 'Edward'.",
     readMore: "Lire Plus",
@@ -41,7 +41,7 @@ export const translations = {
 
     // Hero Section
     movieTitle: "Edward & Bowie",
-    movieDetails: "2022 • Dokumentarfilm • Kunstfilm",
+    movieDetails: "2025 • Dokumentarfilm • Kunstfilm",
     synopsis: "Prominente, Models und Popstars bildeten den Strom der Menschheit, der 1981 durch Edward Bells Kellerraum-Studio in Earl's Court floss, dem Jahr, in dem Marcus Thompson den ursprünglichen Kurzfilm mit dem Titel 'Edward' drehte. Teils Fantasie, teils Realität untersuchte der dreißigminütige Film Bells Methoden, Einflüsse, Lebensstil und Werk und wurde auf 35mm in London und Südfrankreich gedreht. Jetzt wurde ein neuer Film fertiggestellt.",
     mobileSynopsis: "Prominente, Models und Popstars bildeten den Strom der Menschheit, der 1981 durch Edward Bells Kellerraum-Studio in Earl's Court floss, dem Jahr, in dem Marcus Thompson den ursprünglichen Kurzfilm mit dem Titel 'Edward' drehte.",
     readMore: "Mehr lesen",
@@ -58,7 +58,7 @@ export const translations = {
 
     // Hero Section
     movieTitle: "Edward & Bowie",
-    movieDetails: "2022 • Documental • Película de Arte",
+    movieDetails: "2025 • Documental • Película de Arte",
     synopsis: "Socialités, modelos y estrellas pop formaban la corriente de humanidad que fluía a través del estudio del sótano de Edward Bell en Earl's Court en 1981, el año en que Marcus Thompson rodó el cortometraje original titulado 'Edward'. Parte fantasía y parte realidad, la película de treinta minutos examinó los métodos, influencias, estilo de vida y obra de Bell y fue rodada en 35mm en Londres y el sur de Francia. Ahora se acaba de completar una nueva película.",
     mobileSynopsis: "Socialités, modelos y estrellas pop formaban la corriente de humanidad que fluía a través del estudio del sótano de Edward Bell en Earl's Court en 1981, el año en que Marcus Thompson rodó el cortometraje original titulado 'Edward'.",
     readMore: "Leer Más",
