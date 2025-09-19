@@ -51,6 +51,23 @@ export const translations = {
     // CTA Section
     getTickets: "Event-Info besuchen",
     learnMore: "Über Art Decade"
+  },
+  es: {
+    // Navigation
+    backToWebsite: "Volver al sitio web",
+
+    // Hero Section
+    movieTitle: "Edward & Bowie",
+    movieDetails: "2022 • Documental • Película de Arte",
+    synopsis: "Socialités, modelos y estrellas pop formaban la corriente de humanidad que fluía a través del estudio del sótano de Edward Bell en Earl's Court en 1981, el año en que Marcus Thompson rodó el cortometraje original titulado 'Edward'. Parte fantasía y parte realidad, la película de treinta minutos examinó los métodos, influencias, estilo de vida y obra de Bell y fue rodada en 35mm en Londres y el sur de Francia. Ahora se acaba de completar una nueva película.",
+    mobileSynopsis: "Socialités, modelos y estrellas pop formaban la corriente de humanidad que fluía a través del estudio del sótano de Edward Bell en Earl's Court en 1981, el año en que Marcus Thompson rodó el cortometraje original titulado 'Edward'.",
+    readMore: "Leer Más",
+    fullSynopsis: "Socialités, modelos y estrellas pop formaban la corriente de humanidad que fluía a través del estudio del sótano de Edward Bell en Earl's Court en 1981, el año en que Marcus Thompson rodó el cortometraje original titulado 'Edward'. Parte fantasía y parte realidad, la película de treinta minutos examinó los métodos, influencias, estilo de vida y obra de Bell y fue rodada en 35mm en Londres y el sur de Francia. Ahora se acaba de completar una nueva película.\n\nThompson encontró el negativo de 35mm de la película original en los Archivos BFI. La idea era revisitar el mundo del artista más de cuatro décadas después, mientras reflexiona sobre lo crónico, lo creativo, lo estático y caótico: su adicción a la heroína, su estrecha amistad con David Bowie y un amor persistente. ¿Está ambientada esta película a principios de los años 80, pero perseguida por el futuro? ¿O está ambientada en el presente y perseguida por el pasado? En palabras del propio Edward: 'A principios de los ochenta era un drogadicto hecho y derecho y no contribuí con nada creativo a tu filmación; deseo corregir ese error. Pongámoslo en un nivel diferente, con más profundidad y extendamos la escala temporal, entonces y ahora.'",
+    trailer: "VER DOCUMENTAL",
+    buyNow: "SABER MÁS",
+    // CTA Section
+    getTickets: "Visitar Información del Evento",
+    learnMore: "Sobre Art Decade"
   }
 };
 
